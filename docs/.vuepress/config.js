@@ -64,51 +64,37 @@ module.exports = {
                 {
                     title: 'JavaWep',
                     children: [
-                        ['/Java/Console/A001', '#A001_VuePress'],
-                        ['/Java/Console/A002', '#A002_插件清单']
                     ]
                 },
                 {
                     title: 'Java框架',
                     children: [
-                        ['/Java/Console/A001', '#A001_VuePress'],
-                        ['/Java/Console/A002', '#A002_插件清单']
                     ]
                 },
                 {
                     title: '分布式',
                     children: [
-                        ['/Java/Console/A001', '#A001_VuePress'],
-                        ['/Java/Console/A002', '#A002_插件清单']
                     ]
                 },
                 {
                     title: '数据库',
                     children: [
-                        ['/Java/Console/A001', '#A001_VuePress'],
-                        ['/Java/Console/A002', '#A002_插件清单']
                     ]
                 },
                 {
                     title: '中间件',
                     children: [
-                        ['/Java/Console/A001', '#A001_VuePress'],
-                        ['/Java/Console/A002', '#A002_插件清单']
                     ]
                 },
                 {
                     title: 'Linux 和 容器',
                     children: [
-                        ['/Java/Console/A001', '#A001_VuePress'],
-                        ['/Java/Console/A002', '#A002_插件清单']
                     ]
                 },
 
                 {
                     title: '服务网格',
                     children: [
-                        ['/Java/Console/A001', '#A001_VuePress'],
-                        ['/Java/Console/A002', '#A002_插件清单']
                     ]
                 },
 
@@ -119,14 +105,12 @@ module.exports = {
                 {
                     title: '游记',
                     children: [
-                        ['/Thought/Travels/beiPing', '北平游记'],
+
                     ]
                 },
                 {
                     title: '年终回顾',
                     children: [
-                        ['/Thought/YearReview/2018', '2018年'],
-                        ['/Thought/YearReview/2019', '2019年']
                     ]
                 },
             ],
@@ -136,20 +120,18 @@ module.exports = {
                 {
                     title: '应用',
                     children: [
-                        ['/Store/Apps/DownDoors', '下载门户'],
-                        ['/Store/Apps/OwnTest', '博主测评']
                     ]
                 },
                 {
                     title: '电影',
                     children: [
-                        ['/Store/Films/', '收藏级电影']
+
                     ]
                 },
                 {
                     title: '动画',
                     children: [
-                        ['/Store/Anime/', '收藏级动画']
+
                     ]
                 },
             ]
