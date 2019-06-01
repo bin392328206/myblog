@@ -50,7 +50,6 @@ module.exports = {
                         // ['','']=>[路径,标题]
                         // 或者写成 '路径',标题自动识别为该地址的文件中的h1标题
                         // 不以 '/' 结尾的就是指向.md文件
-                        ['/', '首页'],
                         ['/Java/JavaBase/JavaFist.md', '了解Java'], // '/FAQ/DigestionHeap/Digested.md'文件
                         ['/Java/JavaBase/Java流程控制语句.md', '流程控制语句'],
                         ['/Java/JavaBase/数组.md', '数组'],
