@@ -76,6 +76,7 @@ module.exports = {
                 {
                     title: 'JavaWep',
                     children: [
+                        ['/Java/JavaBase/异常.md', '异常'],
                     ]
                 },
                 {
