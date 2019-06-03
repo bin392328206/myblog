@@ -24,7 +24,19 @@ module.exports = {
                 text: '其他学习文档',
                 items: [
                     // link：指向链接也可以是外网链接
-                    {text: 'Java学习博客', link: 'http://www.wangbin.shop:8080'},
+                    {text: '王斌学习博客', link: 'http://www.wangbin.shop:8080'},
+                ]
+            },
+            {
+                text: '在线工具',
+                items: [
+                    // link：指向链接也可以是外网链接
+                    {text: 'PDF转换器', link: 'https://smallpdf.com/cn/pdf-to-word'},
+                    {text: 'JSON编辑器', link: 'https://www.json.cn/'},
+                    {text: 'MD表格生成', link: 'https://tableconvert.com/?output=text&data=id%2C%20name%2C%20age%2C%20gender%0A1%2C%20Lawrence%2C%2039%2C%20M%0A2%2C%20Oliver%2C%2025%2C%20M%0A3%2C%20Roberta%2C%2017%2C%20F%0A4%2C%20Bamboo%2C%2070%2C%20F%0A'},
+                    {text: 'CRON表达式', link: 'http://cron.qqe2.com/'},
+                    {text: '代码格式化', link: 'http://tool.oschina.net/codeformat/html'},
+                    {text: 'YAML->properties', link: 'https://www.toyaml.com/index.html'},
                 ]
             },
         ],
@@ -95,6 +107,7 @@ module.exports = {
                 {
                     title: '服务网格',
                     children: [
+                        ['/Java/serverMash/elastic.md', 'elastic技术栈']
                     ]
                 },
 
