@@ -76,7 +76,7 @@ module.exports = {
                 {
                     title: 'JavaWep',
                     children: [
-                        ['/Java/JavaBase/异常.md', '异常'],
+                        ['/Java/JavaWep/annotation.md', '自定义注解加切面'],
                     ]
                 },
                 {
