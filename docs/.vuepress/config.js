@@ -25,6 +25,7 @@ module.exports = {
                 items: [
                     // link：指向链接也可以是外网链接
                     {text: '王斌学习博客', link: 'http://www.wangbin.shop:8080'},
+                    {text:'Linux命令学习',link:'https://wangchujiang.com/linux-command/'},
                 ]
             },
             {
