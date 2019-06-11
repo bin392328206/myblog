@@ -98,6 +98,7 @@ module.exports = {
                 {
                     title: '中间件',
                     children: [
+                        ['Java/middleware/canalAndOtter.md','Canal+Otter']
                     ]
                 },
                 {
