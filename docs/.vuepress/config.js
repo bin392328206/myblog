@@ -110,7 +110,8 @@ module.exports = {
                 {
                     title: '服务网格',
                     children: [
-                        ['/Java/serverMash/elastic.md', 'elastic技术栈']
+                        ['/Java/serverMash/elastic.md', 'elastic技术栈'],
+                        ['/Java/serverMash/k8s.md', 'k8s技术栈']
                     ]
                 },
 
@@ -131,21 +132,20 @@ module.exports = {
                 },
             ],
             // 打开Store主页链接时生成下面这个菜单
-            '/Store/': [
-                ['', '仓库首页'],
+            '/H5/': [
                 {
-                    title: '应用',
+                    title: '前端基础',
                     children: [
                     ]
                 },
                 {
-                    title: '电影',
+                    title: 'Vue',
                     children: [
-
+                        ['/H5/Vue/VueIntroduce.md', '了解Vue'],
                     ]
                 },
                 {
-                    title: '动画',
+                    title: '其他',
                     children: [
 
                     ]
