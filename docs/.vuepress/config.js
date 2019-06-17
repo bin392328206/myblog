@@ -25,7 +25,7 @@ module.exports = {
                 items: [
                     // link：指向链接也可以是外网链接
                     {text: '王斌学习博客', link: 'http://www.wangbin.shop:8080'},
-                    {text:'Linux命令学习',link:'https://wangchujiang.com/linux-command/'},
+                    {text: 'Linux命令学习', link: 'https://wangchujiang.com/linux-command/'},
                 ]
             },
             {
@@ -34,7 +34,10 @@ module.exports = {
                     // link：指向链接也可以是外网链接
                     {text: 'PDF转换器', link: 'https://smallpdf.com/cn/pdf-to-word'},
                     {text: 'JSON编辑器', link: 'https://www.json.cn/'},
-                    {text: 'MD表格生成', link: 'https://tableconvert.com/?output=text&data=id%2C%20name%2C%20age%2C%20gender%0A1%2C%20Lawrence%2C%2039%2C%20M%0A2%2C%20Oliver%2C%2025%2C%20M%0A3%2C%20Roberta%2C%2017%2C%20F%0A4%2C%20Bamboo%2C%2070%2C%20F%0A'},
+                    {
+                        text: 'MD表格生成',
+                        link: 'https://tableconvert.com/?output=text&data=id%2C%20name%2C%20age%2C%20gender%0A1%2C%20Lawrence%2C%2039%2C%20M%0A2%2C%20Oliver%2C%2025%2C%20M%0A3%2C%20Roberta%2C%2017%2C%20F%0A4%2C%20Bamboo%2C%2070%2C%20F%0A'
+                    },
                     {text: 'CRON表达式', link: 'http://cron.qqe2.com/'},
                     {text: '代码格式化', link: 'http://tool.oschina.net/codeformat/html'},
                     {text: 'YAML->properties', link: 'https://www.toyaml.com/index.html'},
@@ -47,7 +50,7 @@ module.exports = {
                 ['/Java/', 'Java'],
                 ['/H5/', '前端'],
                 ['/Thought/', '个人随笔'],
-                ['/blog/学习文档随笔','学习文档随笔'],
+                ['/blog/学习文档随笔', '学习文档随笔'],
 
             ],
 
@@ -82,34 +85,31 @@ module.exports = {
                 },
                 {
                     title: 'Java框架',
-                    children: [
-                    ]
+                    children: []
                 },
                 {
                     title: '分布式',
-                    children: [
-                    ]
+                    children: []
                 },
                 {
                     title: '数据库',
-                    children: [
-                    ]
+                    children: []
                 },
                 {
                     title: '中间件',
                     children: [
-                        ['Java/middleware/canalAndOtter.md','Canal+Otter']
+                        ['/Java/middleware/canalAndOtter.md', 'Otter技术栈'],
                     ]
                 },
                 {
                     title: 'Linux 和 容器',
-                    children: [
-                    ]
+                    children: []
                 },
 
                 {
                     title: '服务网格',
                     children: [
+                        ['/Java/serverMash/servermash.md', '服务网格介绍'],
                         ['/Java/serverMash/elastic.md', 'elastic技术栈'],
                         ['/Java/serverMash/k8s.md', 'k8s技术栈']
                     ]
@@ -120,23 +120,21 @@ module.exports = {
             '/Thought/': [
                 ['/Thought/', '随笔首页'],
                 {
-                    title: '游记',
+                    title: '技术书籍所感',
                     children: [
-
+                        ['/Thought/亿级流量架构核心技术.md', '亿级流量架构核心技术'],
                     ]
                 },
                 {
                     title: '年终回顾',
-                    children: [
-                    ]
+                    children: []
                 },
             ],
             // 打开Store主页链接时生成下面这个菜单
             '/H5/': [
                 {
                     title: '前端基础',
-                    children: [
-                    ]
+                    children: []
                 },
                 {
                     title: 'Vue',
@@ -146,9 +144,7 @@ module.exports = {
                 },
                 {
                     title: '其他',
-                    children: [
-
-                    ]
+                    children: []
                 },
             ]
         },
