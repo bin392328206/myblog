@@ -100,6 +100,7 @@ module.exports = {
                     children: [
                         ['/Java/middleware/canalAndOtter.md', 'Otter技术栈'],
                         ['/Java/middleware/skywalking.md', 'SkyWalking链路追踪'],
+                        ['/Java/middleware/sonar.md', 'sonar代码审查'],
                     ]
                 },
                 {
