@@ -42,4 +42,16 @@ Docker 启动方式部署探针（需要做到一次构建到处运行的持续�
 ## Java 启动方式
 java -javaagent:/path/to/skywalking-agent/skywalking-agent.jar -Dskywalking.agent.service_name=nacos-provider -Dskywalking.collector.backend_service=localhost:11800 -jar yourApp.jar
 
-
+##  各种指标
+Avg SLA： 服务可用性（主要是通过请求成功与失败次数来计算）
+CPM： 每分钟调用次数
+Avg Response Time： 平均响应时间
+服务可用性指标 SLA
+每分钟平均响应数
+平均响应时间
+服务进程 PID
+服务所在物理机的 IP、Host、OS
+运行时 CPU 使用率
+运行时堆内存使用率
+运行时非堆内存使用率
+GC 情况

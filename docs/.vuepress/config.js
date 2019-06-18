@@ -99,6 +99,7 @@ module.exports = {
                     title: '中间件',
                     children: [
                         ['/Java/middleware/canalAndOtter.md', 'Otter技术栈'],
+                        ['/Java/middleware/skywalking.md', 'SkyWalking链路追踪'],
                     ]
                 },
                 {
