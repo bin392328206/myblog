@@ -75,6 +75,7 @@ module.exports = {
                         ['/Java/JavaBase/IO流3.md', 'IO流3'],
                         ['/Java/JavaBase/JsonAndXML.md', 'JsonAndXML'],
                         ['/Java/JavaBase/异常.md', '异常'],
+                        ['/Java/JavaBase/网络基础.md', '网络基础'],
                     ]
                 },
                 {
