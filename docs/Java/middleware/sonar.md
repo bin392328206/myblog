@@ -14,3 +14,6 @@
 
 
 ## Arthas（阿尔萨斯） 阿里的一个线上bug调试
+下载运行就可以使用
+wget https://alibaba.github.io/arthas/arthas-boot.jar
+java -jar arthas-boot.jar
