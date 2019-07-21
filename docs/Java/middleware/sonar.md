@@ -17,3 +17,10 @@
 下载运行就可以使用
 wget https://alibaba.github.io/arthas/arthas-boot.jar
 java -jar arthas-boot.jar
+
+
+#直接下载可执行文件
+curl -L https://alibaba.github.io/arthas/install.sh | sh
+
+采坑记录 他不能直接同ctrl+c 退出  不然 你下次进去 进程选项的时候 他会默认进入到上一次进程的地方 要用shutdown命令 下次就可以重新选择了
+
