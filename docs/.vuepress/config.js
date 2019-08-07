@@ -18,6 +18,7 @@ module.exports = {
             // [以 '/' 结尾的默认指向该路径下README.md文件]
             {text: 'Java', link: '/Java/'},
             {text: '前端', link: '/H5/'},
+            {text: 'Go', link: '/go/'},
             {text: '随笔', link: '/Thought/'},
             // 多项，下拉形式
             {
@@ -50,6 +51,7 @@ module.exports = {
             '/blog/': [
                 ['/Java/', 'Java'],
                 ['/H5/', '前端'],
+                ['/go/', 'GO'],
                 ['/Thought/', '个人随笔'],
                 ['/blog/学习文档随笔', '学习文档随笔'],
 
