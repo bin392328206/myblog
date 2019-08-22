@@ -19,6 +19,7 @@ module.exports = {
             {text: 'Java', link: '/Java/'},
             {text: '前端', link: '/H5/'},
             {text: 'Go', link: '/go/'},
+            {text: '大数据', link: '/BigData/'},
             {text: '随笔', link: '/Thought/'},
             // 多项，下拉形式
             {
@@ -28,6 +29,8 @@ module.exports = {
                     {text: '王斌学习博客', link: 'http://www.wangbin.shop:8080'},
                     {text: 'Linux命令学习', link: 'https://wangchujiang.com/linux-command/'},
                     {text: 'DD博客', link: 'http://blog.didispace.com/'},
+                    {text: 'Java成神之路', link: 'https://www.hollischuang.com/archives/3280'},
+
                 ]
             },
             {
@@ -52,6 +55,7 @@ module.exports = {
                 ['/Java/', 'Java'],
                 ['/H5/', '前端'],
                 ['/go/', 'GO'],
+                ['/BigData/', '大数据'],
                 ['/Thought/', '个人随笔'],
                 ['/blog/学习文档随笔', '学习文档随笔'],
 
