@@ -156,6 +156,20 @@ module.exports = {
                     title: '其他',
                     children: []
                 },
+            ],
+
+            '/BigData/': [
+                {
+                    title: '大数据基础组件',
+                    children: [
+                        ['/BigData/BigDataBase/Flume.md', 'Flume'],
+                        ['/BigData/BigDataBase/zookeeper.md', 'zookeeper'],
+                    ]
+                },
+                {
+                    title: '其他',
+                    children: []
+                },
             ]
         },
     }
