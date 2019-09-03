@@ -24,4 +24,17 @@
     第一个姿势：使用 jps + jstack
     定位神器 arthas 
     
-## 
+## [Elasticsearch如何做到亿级数据查询毫秒级返回？](https://mp.weixin.qq.com/s/AkmCPMujP5Kiw2ONgjYe9w)
+    说明es的性能优化没有银弹
+##[巧用这19条MySQL优化，效率至少提高3倍](https://mp.weixin.qq.com/s?__biz=MzI2OTQ4OTQ1NQ==&mid=2247486806&idx=1&sn=32beb45a00a045504071387b99280190&chksm=eadec916dda9400083d4e302dfa54530983aec3cd34979b5317b775da5a45aec33f0707d2046&token=827663039&lang=zh_CN&scene=21#wechat_redirect)
+
+
+## [经常用 HashMap ？这 6 个问题回答下 ！](https://mp.weixin.qq.com/s/u-YpehrzfhShpPNnIjkicQ)
+        深入理解hashmap
+        红黑树的规则
+        1 节点 要么是红色要么是黑色 
+        2. 跟节点是黑色的
+        3.叶子节点是黑色
+        4 如果一个节点是红色的 的子节点必须是黑色
+        5 从一个节点到每个叶子节点的 黑色的个数是相等的
+        6.删除 和拆入 会改变红黑数的结构 左旋 右旋 或者是 变颜色

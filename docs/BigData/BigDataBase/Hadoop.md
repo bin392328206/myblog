@@ -64,4 +64,45 @@ mapreduce 是一个实时计算的框架 是属于代码层面 类似于我们�
     HDFS的内部工作机制对客户端保持透明，客户端请求访问HDFS都是通过向NameNode申请来进行的
 
 ### HDFS写数据的流程
-- 客户端发起文件上传请求，通过RPC与NameNode建立通讯 NameNode检查目标文件是否存在，父类名是否存在，返回是否可以上传
+1.  客户端发起文件上传请求，通过RPC与NameNode建立通讯 NameNode检查目标文件是否存在，父类名是否存在，返回是否可以上传文件
+2. NameNode检查整个文件系统的目录数（看文件是否重复）
+3.返回你是否可以继续上传文件
+4. 如果是可以上传的话 继续请求上传的块（它会在请求写的操作之前按照每128M分成一个块）并且带上这次请求的要求备份数 
+5. NameNode通过检查DataNode信息池 返回三台可用的DataNode ip   并且返回地址是按照网络拓扑的距离来排序 距离越近排在最前面
+6.客户端 和这些DataNode建立pipline  pipline的建立过程是一个一个的建立 然后一个连一个的返回 最后完成一个流式管道的建立 
+7. 接下来就算建立数据传输的Stream 以packet为单位 每次发送64k 然后每个DataNode保存源源不断的数据包 并且返回这个数据包是否保存成功 直到这个块的数据全部保存完成
+8 接下来就是第二个快继续上面的步骤 最后直到这个文件全部上传成功 这就是HDFS的上传流程
+
+
+### HDFS的读数据的流程
+1.客户端发起请求下载文件 NameNode 检查元数据 然后最后把这些数据返回给客户端（关于返回的备份 返回的是网络拓扑中 ip 距离越近的返回在前面）
+2.请求下载文件 向各个DataNode中下载 
+3.客户端把所有的文件下载完毕之后 客户端把各个块合成一个真正的文件 
+
+
+## MapReduce 计算模型
+
+### 它的思想
+ MapReduce 核心思想是 分而治之
+Map 分 是把复杂的任务分解成为若干个简单的任务 来并行处理，可以进行拆分的前提是这些小任务可以并行计算，彼此间几乎没有依赖关系
+Redece 合即对Map阶段的结果进行全局的汇总
+
+
+###  MapReduce
+ 它是一个分布式运算程序的框架，核心的功能是将用户编写的业务逻辑代码和自带的默认组成一个完整的分布式运算程序 并发运行在Hadoop集群上
+一个完整的mapreduce程序 在分布式运行时 有三类实例进程
+1. MRAppMaster: 负责整个程序的过程调度和状态协调
+2. MapTask 负责map阶段整个数据处理过程
+3. ReduceTask 负责reduce阶段的整个数据处理流程
+
+#### Hadoop的数据类型
+long  LongWritable
+String Text
+Interge Intwritable
+null NullWritable
+
+
+
+## Hadoop 集群搭建
+[搭建一](https://blog.csdn.net/dream_an/article/details/52946840) 
+[搭建二](https://blog.csdn.net/Superman404/article/details/83591324) 
