@@ -64,3 +64,6 @@ public @interface LogAnnotation {
             
 ## 行家项目 用了很多 第一个日志 切面 第二个 分页切面 第三 MQ 处理失败切面   第四 调用积分的方法 积分累计 总的来说 Aop的思想 是一个不错的思想哈
 #### 总结就是使用 自定义注解 加上@Aspect注解就可以实现AOP横向切面编程 来达到一个解耦的效果
+
+
+[mybatis通过拦截器执行insert,update 自动添加当前时间](https://blog.csdn.net/KokJuis/article/details/89202211)
