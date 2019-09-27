@@ -10,3 +10,6 @@ Flume是Cloudera提供的一个分布式、可靠、和高可用的海量日志�
 [Apache Flume1.8.0用户手册官方文档理解](https://blog.csdn.net/weixin_40483882/article/details/81227952)
 
 [Storm之——Storm+Kafka+Flume+Zookeeper+MySQL实现数据实时分析(环境搭建篇)](https://blog.csdn.net/l1028386804/article/details/79440511)
+
+
+[flume安装](https://www.cnblogs.com/zgaspnet/p/9101357.html)

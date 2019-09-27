@@ -45,7 +45,9 @@ clientPort=2181
 ~
 ```
 
+## zookeeper集权搭建
+[搭建成功](https://blog.csdn.net/qiushisoftware/article/details/79043379_)
 
 
-
+zookeeper 不像说像hadoop那样 启动一个主节点 其他从节点也会帮你1启动  他是先要启动各个服务 然后从各个服务中选择一个master 也就是说再你启动之前你也不知道哪个是master
 
