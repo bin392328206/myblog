@@ -18,3 +18,42 @@ selenium-debug.log
 *.sln
 
 package-lock.json
+
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+logs/*
+**.log
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+/build/
+
+
+### maven target ###
+eos-common/common-web/target/
+eos-gateway/target/
+eos-modules/eos-listener/target/
+eos-modules/eos-operate/target/
+eos-modules/eos-test/target/
+/config/
+/eos-modules/eos-search/config/
+
