@@ -139,7 +139,7 @@ module.exports = {
                         ['/Thought/实战Java高并发编程.md', '实战Java高并发编程'],
                         ['/Thought/数据机构和算法.md', '数据机构和算法'],
                         ['/Thought/深入了解Java虚拟机.md', '深入了解Java虚拟机'],
-                        ['/Thought/深入理解计算机系统.md', '深入理解计算机系统'],
+                        ['/Thought/深入理解计算机系统.md', '深入理解计算机系统']
                     ]
                 },
                 {
@@ -174,7 +174,7 @@ module.exports = {
                         ['/BigData/BigDataBase/Hadoop.md', 'Hadoop'],
                         ['/BigData/BigDataBase/Hbase.md', 'Hbase'],
                         ['/BigData/BigDataBase/Hive.md', 'Hive'],
-                        ['/BigData/BigDataBase/spark.md', 'Spark'],
+                        ['/BigData/BigDataBase/spark.md', 'Spark']
                     ]
                 },
                 {
