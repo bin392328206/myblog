@@ -133,6 +133,13 @@ module.exports = {
                     title: '技术书籍所感',
                     children: [
                         ['/Thought/亿级流量架构核心技术.md', '亿级流量架构核心技术'],
+                        ['/Thought/2019AugustBlog.md', '2019AugustBlog'],
+                        ['/Thought/Java并发编程的艺术.md', 'Java并发编程的艺术'],
+                        ['/Thought/Mybatis从入门到精通.md', 'Mybatis从入门到精通'],
+                        ['/Thought/实战Java高并发编程.md', '实战Java高并发编程'],
+                        ['/Thought/数据机构和算法.md', '数据机构和算法'],
+                        ['/Thought/深入了解Java虚拟机.md', '深入了解Java虚拟机'],
+                        ['/Thought/深入理解计算机系统.md', '深入理解计算机系统'],
                     ]
                 },
                 {
@@ -164,6 +171,10 @@ module.exports = {
                     children: [
                         ['/BigData/BigDataBase/Flume.md', 'Flume'],
                         ['/BigData/BigDataBase/zookeeper.md', 'zookeeper'],
+                        ['/BigData/BigDataBase/Hadoop.md', 'Hadoop'],
+                        ['/BigData/BigDataBase/Hbase.md', 'Hbase'],
+                        ['/BigData/BigDataBase/Hive.md', 'Hive'],
+                        ['/BigData/BigDataBase/spark.md', 'Spark'],
                     ]
                 },
                 {
