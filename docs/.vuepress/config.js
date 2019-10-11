@@ -156,7 +156,7 @@ module.exports = {
                 {
                     title: 'Vue',
                     children: [
-                        ['/H5/Vue/VueIntroduce.md', '了解Vue'],
+                        ['/H5/Vue/VueIntroduce.md', '了解Vue']
                     ]
                 },
                 {
