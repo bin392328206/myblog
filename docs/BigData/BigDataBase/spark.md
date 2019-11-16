@@ -57,7 +57,7 @@ YARN Mesos AWS
 - 从一个作业切换到下一个作业时 将发生一次checkpoint操作 在此之前会缓存上一个作业的中间结果，checkpoint操作会将数据放置在磁盘文件系统中
 
 ## spark 教程
-[史上最简单的spark分布式计算教程](https://blog.csdn.net/youbitch1/article/details/88355111)
+[史上最简单的spark分布式计算教程](https://blog.csdn.net/youbitch1/article/details/89925790)
 
 
 ##Spark SQL的本质是将应用层提供的SQL语句翻译为计算框架的job代码 并将其Job提交到集群执行的一种查询机制
@@ -69,6 +69,15 @@ YARN Mesos AWS
     - 所谓的结构数据,就是每条记录共用的已知的字段集合
     - 如果你的数据是这个样子,那么sparkSQL绝对是你的开发首选
     - sparkSQL查询这些数据会更加的简单高效
+
+## RDD  DataSet DataFrame 的相关解析
+- RDD
+    - RDD是Spark提供的最重要的抽象的概念，弹性的分布式数据集，它是一种有容错机制的特殊集合，可以分布在集群的节点上，
+    以函数式编操作集合的方式，进行各种并行操作。Spark的RDD内置了各种函数操作，举个例子，我们编写wordcount案例，
+    如果使用mapreduce进行编程，还是很复杂的，如果用RDD的话代码量大大的减少（scala编程一句话搞定），所以相对mapreduce来说单从编程上就简化了很多。
+    但是同时也出现了一个问题，学习Scala、python、java语言，那么这个使用的成本以及门槛就会很高了对于不太懂开发的人（DBA）想要使用spark是比较困难的。
+
+- [异同](https://blog.csdn.net/weixin_38613375/article/details/89500160)
 
 ## spark的整个运行流程进行总结
 - 把我们编写的spark应用编译打包
