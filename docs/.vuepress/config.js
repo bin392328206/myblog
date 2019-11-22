@@ -1,6 +1,6 @@
 module.exports = {
     base: "/myblog/",
-    title: 'jimmy',
+    title: 'jimmy(六脉神剑)',
     description: '种一棵树最好的时候是十年前',
 
     // 这是博客的头部导航栏
@@ -109,6 +109,7 @@ module.exports = {
                         ['/Java/middleware/canalAndOtter.md', 'Otter技术栈'],
                         ['/Java/middleware/skywalking.md', 'SkyWalking链路追踪'],
                         ['/Java/middleware/sonar.md', 'sonar代码审查'],
+                        ['/Java/middleware/分布式事务.md', '分布式事务'],
                     ]
                 },
                 {
