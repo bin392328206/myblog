@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>FastJson | jimmy(六脉神剑)</title>
+    <meta name="description" content="种一棵树最好的时候是十年前">
+    
+    
+    <link rel="preload" href="/myblog/assets/css/0.styles.bb285c56.css" as="style"><link rel="preload" href="/myblog/assets/js/app.0c6a3e6f.js" as="script"><link rel="preload" href="/myblog/assets/js/22.caad605c.js" as="script"><link rel="prefetch" href="/myblog/assets/js/10.86e4b344.js"><link rel="prefetch" href="/myblog/assets/js/11.6bf75294.js"><link rel="prefetch" href="/myblog/assets/js/12.6a5fe9aa.js"><link rel="prefetch" href="/myblog/assets/js/13.c8027a8a.js"><link rel="prefetch" href="/myblog/assets/js/14.ba727d81.js"><link rel="prefetch" href="/myblog/assets/js/15.7aecfee7.js"><link rel="prefetch" href="/myblog/assets/js/16.f32dfcd4.js"><link rel="prefetch" href="/myblog/assets/js/17.f24bdcb9.js"><link rel="prefetch" href="/myblog/assets/js/18.8645cc73.js"><link rel="prefetch" href="/myblog/assets/js/19.e342a0be.js"><link rel="prefetch" href="/myblog/assets/js/2.03feb64a.js"><link rel="prefetch" href="/myblog/assets/js/20.8ac192ce.js"><link rel="prefetch" href="/myblog/assets/js/21.ac99894d.js"><link rel="prefetch" href="/myblog/assets/js/23.fbd832c0.js"><link rel="prefetch" href="/myblog/assets/js/24.dcdc9d21.js"><link rel="prefetch" href="/myblog/assets/js/25.b06028eb.js"><link rel="prefetch" href="/myblog/assets/js/26.524af8a3.js"><link rel="prefetch" href="/myblog/assets/js/27.81a7f7a3.js"><link rel="prefetch" href="/myblog/assets/js/28.41a9ff2e.js"><link rel="prefetch" href="/myblog/assets/js/29.2f542642.js"><link rel="prefetch" href="/myblog/assets/js/3.4ada0c35.js"><link rel="prefetch" href="/myblog/assets/js/30.f94836cf.js"><link rel="prefetch" href="/myblog/assets/js/31.81d5337f.js"><link rel="prefetch" href="/myblog/assets/js/32.3fea46b6.js"><link rel="prefetch" href="/myblog/assets/js/33.eb59c615.js"><link rel="prefetch" href="/myblog/assets/js/34.c7a75edb.js"><link rel="prefetch" href="/myblog/assets/js/35.5eb6855b.js"><link rel="prefetch" href="/myblog/assets/js/36.2e5cb9bf.js"><link rel="prefetch" href="/myblog/assets/js/37.69fe98f5.js"><link rel="prefetch" href="/myblog/assets/js/38.9795f763.js"><link rel="prefetch" href="/myblog/assets/js/39.d5dce79b.js"><link rel="prefetch" href="/myblog/assets/js/4.1750788b.js"><link rel="prefetch" href="/myblog/assets/js/40.2103c17a.js"><link rel="prefetch" href="/myblog/assets/js/41.f5ea1578.js"><link rel="prefetch" href="/myblog/assets/js/42.72e5e6ab.js"><link rel="prefetch" href="/myblog/assets/js/43.80f5b6c8.js"><link rel="prefetch" href="/myblog/assets/js/44.055648bd.js"><link rel="prefetch" href="/myblog/assets/js/45.a3a6bde8.js"><link rel="prefetch" href="/myblog/assets/js/46.6dc3a768.js"><link rel="prefetch" href="/myblog/assets/js/47.26b73fda.js"><link rel="prefetch" href="/myblog/assets/js/48.566985e8.js"><link rel="prefetch" href="/myblog/assets/js/49.4e35fbc0.js"><link rel="prefetch" href="/myblog/assets/js/5.8bab9c37.js"><link rel="prefetch" href="/myblog/assets/js/50.7586c5df.js"><link rel="prefetch" href="/myblog/assets/js/51.ba057a22.js"><link rel="prefetch" href="/myblog/assets/js/52.538dfc53.js"><link rel="prefetch" href="/myblog/assets/js/53.0b9901c3.js"><link rel="prefetch" href="/myblog/assets/js/54.4b08cec5.js"><link rel="prefetch" href="/myblog/assets/js/55.15dfc3a4.js"><link rel="prefetch" href="/myblog/assets/js/56.18d2a3c1.js"><link rel="prefetch" href="/myblog/assets/js/57.38814818.js"><link rel="prefetch" href="/myblog/assets/js/6.e81ea5f3.js"><link rel="prefetch" href="/myblog/assets/js/7.f4baaa53.js"><link rel="prefetch" href="/myblog/assets/js/8.609aaec0.js"><link rel="prefetch" href="/myblog/assets/js/9.bf8da6ba.js">
+    <link rel="stylesheet" href="/myblog/assets/css/0.styles.bb285c56.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/myblog/" class="home-link router-link-active"><!----> <span class="site-name">jimmy(六脉神剑)</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/myblog/Java/" class="nav-link router-link-active">Java</a></div><div class="nav-item"><a href="/myblog/H5/" class="nav-link">前端</a></div><div class="nav-item"><a href="/myblog/go/" class="nav-link">Go</a></div><div class="nav-item"><a href="/myblog/BigData/" class="nav-link">大数据</a></div><div class="nav-item"><a href="/myblog/Thought/" class="nav-link">随笔</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">其他学习文档</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="http://www.wangbin.shop:8080" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  王斌学习博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://wangchujiang.com/linux-command/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Linux命令学习
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://blog.didispace.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  DD博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.hollischuang.com/archives/3280" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Java成神之路
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">在线工具</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://smallpdf.com/cn/pdf-to-word" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  PDF转换器
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.json.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  JSON编辑器
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://tableconvert.com/?output=text&amp;data=id%2C%20name%2C%20age%2C%20gender%0A1%2C%20Lawrence%2C%2039%2C%20M%0A2%2C%20Oliver%2C%2025%2C%20M%0A3%2C%20Roberta%2C%2017%2C%20F%0A4%2C%20Bamboo%2C%2070%2C%20F%0A" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  MD表格生成
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://cron.qqe2.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  CRON表达式
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://tool.oschina.net/codeformat/html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  代码格式化
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.toyaml.com/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  YAML-&gt;properties
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <a href="https://github.com/bin392328206/myblog.git" target="_blank" rel="noopener noreferrer" class="repo-link">
+    My GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/myblog/Java/" class="nav-link router-link-active">Java</a></div><div class="nav-item"><a href="/myblog/H5/" class="nav-link">前端</a></div><div class="nav-item"><a href="/myblog/go/" class="nav-link">Go</a></div><div class="nav-item"><a href="/myblog/BigData/" class="nav-link">大数据</a></div><div class="nav-item"><a href="/myblog/Thought/" class="nav-link">随笔</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">其他学习文档</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="http://www.wangbin.shop:8080" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  王斌学习博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://wangchujiang.com/linux-command/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Linux命令学习
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://blog.didispace.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  DD博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.hollischuang.com/archives/3280" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Java成神之路
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">在线工具</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://smallpdf.com/cn/pdf-to-word" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  PDF转换器
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.json.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  JSON编辑器
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://tableconvert.com/?output=text&amp;data=id%2C%20name%2C%20age%2C%20gender%0A1%2C%20Lawrence%2C%2039%2C%20M%0A2%2C%20Oliver%2C%2025%2C%20M%0A3%2C%20Roberta%2C%2017%2C%20F%0A4%2C%20Bamboo%2C%2070%2C%20F%0A" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  MD表格生成
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://cron.qqe2.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  CRON表达式
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://tool.oschina.net/codeformat/html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  代码格式化
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.toyaml.com/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  YAML-&gt;properties
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <a href="https://github.com/bin392328206/myblog.git" target="_blank" rel="noopener noreferrer" class="repo-link">
+    My GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first collapsable"><p class="sidebar-heading open"><span>Java基础</span> <span class="arrow down"></span></p> <ul class="sidebar-group-items"><li><a href="/myblog/Java/JavaBase/JavaFist.html" class="sidebar-link">了解Java</a></li><li><a href="/myblog/Java/JavaBase/Java流程控制语句.html" class="sidebar-link">流程控制语句</a></li><li><a href="/myblog/Java/JavaBase/数组.html" class="sidebar-link">数组</a></li><li><a href="/myblog/Java/JavaBase/二维数组与方法.html" class="sidebar-link">二维数组与方法</a></li><li><a href="/myblog/Java/JavaBase/IO流1.html" class="sidebar-link">IO流1</a></li><li><a href="/myblog/Java/JavaBase/IO流2.html" class="sidebar-link">IO流2</a></li><li><a href="/myblog/Java/JavaBase/IO流3.html" class="sidebar-link">IO流3</a></li><li><a href="/myblog/Java/JavaBase/JsonAndXML.html" class="active sidebar-link">JsonAndXML</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myblog/Java/JavaBase/JsonAndXML.html#fastjson" class="sidebar-link">FastJson</a></li><li class="sidebar-sub-header"><a href="/myblog/Java/JavaBase/JsonAndXML.html#fastjson的用法" class="sidebar-link">FastJson的用法</a></li><li class="sidebar-sub-header"><a href="/myblog/Java/JavaBase/JsonAndXML.html#xml解析" class="sidebar-link">XML解析</a></li></ul></li><li><a href="/myblog/Java/JavaBase/异常.html" class="sidebar-link">异常</a></li><li><a href="/myblog/Java/JavaBase/网络基础.html" class="sidebar-link">网络基础</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>JavaWep</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>Java框架</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>分布式</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>数据库</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>中间件</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>Linux 和 容器</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>服务网格</span> <span class="arrow right"></span></p> <!----></div></li></ul> </div> <div class="page"> <div class="content"><h2 id="fastjson"><a href="#fastjson" aria-hidden="true" class="header-anchor">#</a> FastJson</h2> <h3 id="fastjson的介绍"><a href="#fastjson的介绍" aria-hidden="true" class="header-anchor">#</a> FastJson的介绍</h3> <blockquote><p>JSON协议使用方便，越来越流行,JSON的处理器有很多,这里我介绍一下FastJson,FastJson是阿里的开源框架,被不少企业使用,是一个极其优秀的Json框架</p></blockquote> <hr> <h3 id="fastjson的特点"><a href="#fastjson的特点" aria-hidden="true" class="header-anchor">#</a> FastJson的特点</h3> <ul><li>FastJson数度快,无论序列化和反序列化,都是当之无愧的fast</li> <li>功能强大(支持普通JDK类包括任意Java Bean Class、Collection、Map、Date或enum)</li> <li>零依赖(没有依赖其它任何类库)</li></ul> <hr> <h3 id="fastjson的简单说明"><a href="#fastjson的简单说明" aria-hidden="true" class="header-anchor">#</a> FastJson的简单说明</h3> <ul><li>FastJson对于json格式字符串的解析主要用到了下面三个类
+<ul><li>JSON：fastJson的解析器，用于JSON格式字符串与JSON对象及javaBean之间的转换</li> <li>JSONObject：fastJson提供的json对象</li> <li>JSONArray：fastJson提供json数组对象</li></ul></li></ul> <hr> <h2 id="fastjson的用法"><a href="#fastjson的用法" aria-hidden="true" class="header-anchor">#</a> FastJson的用法</h2> <div class="language- extra-class"><pre class="language-text"><code>    public static void main(String[] args) {
+//		test1();
+//		test2();
+//		test3();
+//		test4();
+//		test42();
+		test5();
+	}
+	
+	private static void test5() {
+		Persons persons = new Persons();
+		
+		Roles roles = new Roles();
+		roles.setId(1);
+		roles.setName(&quot;东东&quot;);
+		persons.setAge(5);
+		persons.setName(&quot;小凤&quot;);
+		persons.setRoles(roles);
+		
+		roles.setPersons(persons);
+		
+		String data = JSON.toJSONString(persons,SerializerFeature.DisableCircularReferenceDetect);
+		System.out.println(data);
+	}
+
+	private static void test42() {
+		String data = &quot;[{\&quot;age\&quot;:6,\&quot;name\&quot;:\&quot;a\&quot;},{\&quot;age\&quot;:6,\&quot;name\&quot;:\&quot;a\&quot;},{\&quot;age\&quot;:7,\&quot;name\&quot;:\&quot;b\&quot;}]&quot;;
+		List&lt;Persons&gt; list = JSON.parseObject(data, new TypeReference&lt;List&lt;Persons&gt;&gt;(){});
+		System.out.println(list);
+	}
+
+	private static void test4() {
+		List&lt;Persons&gt; list = new ArrayList&lt;Persons&gt;();
+		String data = &quot;[{\&quot;age\&quot;:6,\&quot;name\&quot;:\&quot;a\&quot;},{\&quot;age\&quot;:6,\&quot;name\&quot;:\&quot;a\&quot;},{\&quot;age\&quot;:7,\&quot;name\&quot;:\&quot;b\&quot;}]&quot;;
+		JSONArray ja = JSON.parseArray(data);
+		for (Object object : ja) {
+			JSONObject jo = (JSONObject) object;
+			Integer o1 = (Integer) jo.get(&quot;age&quot;);
+			String o2 = (String) jo.get(&quot;name&quot;);
+			list.add(new Persons(o2, o1));
+		}
+		System.out.println(list);
+	}
+
+	public static void test3(){
+		List&lt;Persons&gt; list = new ArrayList&lt;Persons&gt;();
+		
+		Persons p1 = new Persons(&quot;a&quot;,6);
+		Persons p2 = new Persons(&quot;b&quot;,7);
+		
+		list.add(p1);
+		list.add(p1);
+		list.add(p2);
+		// 解决循环引用
+		String string = JSON.toJSONString(list,SerializerFeature.DisableCircularReferenceDetect);
+		
+		System.out.println(string);
+		
+	}
+	
+	private static void test2() {
+		String data = &quot;{\&quot;age\&quot;:5,\&quot;name\&quot;:\&quot;晓东\&quot;}&quot;;
+		Persons persons = JSON.parseObject(data,Persons.class);
+		System.out.println(persons);
+	
+	}
+	
+	public static void test1(){
+		Persons persons = new Persons(&quot;晓东&quot;,5);
+		String jsonString = JSON.toJSONString(persons);
+		System.out.println(jsonString);
+	}
+</code></pre></div><ul><li>Persons</li></ul> <div class="language- extra-class"><pre class="language-text"><code>    public class Persons {
+    	private Roles roles;
+    	
+    	public Persons(Roles roles, String name, int age) {
+    		super();
+    		this.roles = roles;
+    		this.name = name;
+    		this.age = age;
+    	}
+    	public Roles getRoles() {
+    		return roles;
+    	}
+    	public void setRoles(Roles roles) {
+    		this.roles = roles;
+    	}
+    	private String name;
+    	private int age;
+    	public String getName() {
+    		return name;
+    	}
+    	public void setName(String name) {
+    		this.name = name;
+    	}
+    	public int getAge() {
+    		return age;
+    	}
+    	public void setAge(int age) {
+    		this.age = age;
+    	}
+    	@Override
+    	public String toString() {
+    		return &quot;Persons [roles=&quot; + roles + &quot;, name=&quot; + name + &quot;, age=&quot; + age + &quot;]&quot;;
+    	}
+    	public Persons() {
+    	}
+    	public Persons(String name, int age) {
+    		this.name = name;
+    		this.age = age;
+    	}
+    }
+</code></pre></div><ul><li>Roles</li></ul> <div class="language- extra-class"><pre class="language-text"><code>    public class Roles {
+    	// 停止转换
+    	@JSONField(serialize=false)
+    	private Persons persons;
+    	public Persons getPersons() {
+    		return persons;
+    	}
+    	public void setPersons(Persons persons) {
+    		this.persons = persons;
+    	}
+    	private String name;
+    	private int id;
+    	public String getName() {
+    		return name;
+    	}
+    	public void setName(String name) {
+    		this.name = name;
+    	}
+    	public int getId() {
+    		return id;
+    	}
+    	public void setId(int id) {
+    		this.id = id;
+    	}
+    	@Override
+    	public String toString() {
+    		return &quot;Roles [name=&quot; + name + &quot;, id=&quot; + id +&quot;, Persons = &quot; +persons+&quot;]&quot;;
+    	}
+    	public Roles(String name, int id,Persons persons) {
+    		this.name = name;
+    		this.id = id;
+    		this.persons = persons;
+    	}
+    	public Roles() {
+    	}
+    }
+</code></pre></div><hr> <h2 id="xml解析"><a href="#xml解析" aria-hidden="true" class="header-anchor">#</a> XML解析</h2> <h3 id="xml基础"><a href="#xml基础" aria-hidden="true" class="header-anchor">#</a> XML基础</h3> <ul><li><p>什么是XML</p> <ul><li>XML 指可扩展标记语言（EXtensible Markup Language）</li> <li>XML 是一种标记语言，很类似 HTML</li> <li>XML 的设计宗旨是传输数据，而非显示数据</li> <li>XML 标签没有被预定义。您需要自行定义标签。</li> <li>XML 被设计为具有自我描述性。</li> <li>XML 是 W3C 的推荐标准</li></ul></li> <li><p>XML 与 HTML 的主要差异</p> <ul><li>XML 不是 HTML 的替代。</li> <li>XML 和 HTML 为不同的目的而设计</li> <li>XML 被设计为传输和存储数据，其焦点是数据的内容。</li> <li>HTML 被设计用来显示数据，其焦点是数据的外观</li> <li>HTML 旨在显示信息，而 XML 旨在传输信息。</li></ul></li></ul> <hr> <ul><li>demo.xml</li></ul> <div class="language- extra-class"><pre class="language-text"><code>    &lt;!-- xml 的版本与编码 --&gt;
+    &lt;?xml version =&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+    &lt;person&gt;
+    	&lt;student&gt;
+    		&lt;name&gt;东东&lt;/name&gt;
+    		&lt;age&gt;15&lt;/age&gt;
+    	&lt;/student&gt;
+    	
+    	&lt;dog&gt;
+    		&lt;name&gt;阿花&lt;/name&gt;
+    		&lt;color&gt;red&lt;/color&gt;
+    	&lt;/dog&gt;
+    	
+    &lt;/person&gt;
+</code></pre></div><hr> <ul><li>Demo4j解析</li></ul> <div class="language- extra-class"><pre class="language-text"><code>    public class Demo4JTest {
+    	public static void main(String[] args) throws Exception {
+    		// 创建XMl对象的读取流
+    		SAXReader reader = new SAXReader();
+    		// 读取文件返回一个文档对象
+    		Document read = reader.read(Demo4JTest.class.getResourceAsStream(&quot;/demo.xml&quot;));
+    		// 获取根节点
+    		Element eroot = read.getRootElement();//person
+    		// 获取根节点下面所有的子标签
+    		List&lt;Element&gt; elements = eroot.elements();// student 、Dog
+    		
+    		/*for (Element element : elements) {
+    			if(element.getName().equals(&quot;student&quot;)){
+    				Element ename = element.element(&quot;name&quot;);
+    				System.out.println(ename.getText());
+    				Element eage = element.element(&quot;age&quot;);
+    				System.out.println(eage.getText());
+    			}
+    		}*/
+    		for (Element element : elements) {
+    			List&lt;Element&gt; elements2 = element.elements();
+    			for (Element element2 : elements2) {
+    				System.out.println(element2.getName()+&quot;:&quot;+element2.getText());
+    			}
+    		}
+    	}
+    }
+</code></pre></div><ul><li>Demo4J写入</li></ul> <div class="language- extra-class"><pre class="language-text"><code>    public static void test1() throws Exception{
+		//用文档助手新建一个元素
+		Element root = DocumentHelper.createElement(&quot;Persons&quot;);
+		root.addElement(&quot;weight&quot;).addText(&quot;350&quot;);
+		//创建文档
+		Document document =  DocumentHelper.createDocument(root);
+		//添加属性
+		root.addAttribute(&quot;count&quot;,&quot;2&quot;);
+		//父元素生成一个子元素
+		Element e1 = root.addElement(&quot;Person&quot;);
+		//给子元素添加属性
+		e1.addAttribute(&quot;id&quot;,&quot;1&quot;);
+		//给子元素添加孙子元素
+		e1.addElement(&quot;person-name&quot;).addText(&quot;小茗同学&quot;);
+		e1.addElement(&quot;person-age&quot;).addText(&quot;18&quot;);
+		
+		//设置文件编码
+		OutputFormat of = new OutputFormat();
+		of.setEncoding(&quot;UTF-8&quot;);
+		//设置换行
+		of.setNewlines(true);
+		//设置缩进
+		of.setIndent(true);
+		//使用四个空格缩进,可以兼容文本比编辑器
+		of.setIndent(&quot;    &quot;);
+		//创建文件方法
+		XMLWriter xw = new XMLWriter(new FileWriter(&quot;E:/work/TestFile/a.xml&quot;),of);
+		//把内容写入指定的文件文件
+		xw.write(document);
+		//关闭
+		xw.close();
+	}
+</code></pre></div><hr> <h3 id="sax解析"><a href="#sax解析" aria-hidden="true" class="header-anchor">#</a> SAX解析</h3> <div class="language- extra-class"><pre class="language-text"><code>    解析步骤：
+ 1.创建一个SAXParserFactory对象
+    SAXParserFactory factory=SAXParserFactory.newInstance();
+
+ 2.获得解析器    
+    SAXParser parser=factory.newSAXParser();
+
+ 3.调用解析方法解析xml，这里的第一个参数可以传递文件、流、字符串、需要注意第二个参数（new DefaultHander）
+    File file=new File(&quot;girls.xml&quot;);
+    parser.parse(file,new DefaultHandler());
+    /**注解：---&gt;这里的DefaultHandler表示
+    DefaultHandler类是SAX2事件处理程序的默认基类。它继承了EntityResolver、DTDHandler、
+    ContentHandler和ErrorHandler这四个接口。包含这四个接口的所有方法，所以我们在编写事件处理程序时，
+    可以不用直接实现这四个接口，而继承该类，然后重写我们需要的方法，所以在这之前我们先定义一个用于实现解析
+    方法如下：*/
+
+ 4.创建一个MyHandler类来继承DefaultHandler并重写方法
+    //定一个名为MyHandler类用来继承DefaultHandler
+    (1)MyHandler extends DefaultHander
+    (2)重写方法，快速记住方法（2个开始，2个结束，1一个文字(charactor--里面的内容)）
+    (3)2个开始：StartDocment（文档的开始）StartElement(元素的开始) 2个结束:endElement(元素的结束)
+     endDocment(文档的结束，标志着xml文件的结束) 1个文字内容：charactor(文字内容)
+
+ 5.创建一个集合把所解析的内容添加到集合
+    //分析：目的我们只是需要把xml里面的文字内容添加到我们的集合而不需要其他元素，所以我们需要进行判断得到
+    //(接上)我们需要的内容(下面会赋一个图帮助理解)
+
+ 6.接步骤三 输出集合System.out.pritnln(list); 解析完成!
+</code></pre></div><ul><li>Person 老规矩</li></ul> <div class="language- extra-class"><pre class="language-text"><code>    public class Person implements Serializable{
+    	/**
+    	 * 
+    	 */
+    	private static final long serialVersionUID = 1L;
+    	private String name;
+    	private String age;
+    	public String getName() {
+    		return name;
+    	}
+    	public void setName(String name) {
+    		this.name = name;
+    	}
+    	public String getAge() {
+    		return age;
+    	}
+    	public void setAge(String age) {
+    		this.age = age;
+    	}
+    	public Person(String name, String age) {
+    		this.name = name;
+    		this.age = age;
+    	}
+    	public Person() {
+    	}
+    	@Override
+    	public String toString() {
+    		return &quot;Person [name=&quot; + name + &quot;, age=&quot; + age + &quot;]&quot;;
+    	}
+    }
+</code></pre></div><ul><li>第二步继承DefaultHandler</li></ul> <div class="language- extra-class"><pre class="language-text"><code>    public class MyHandler extends DefaultHandler{
+
+    	// 准备添加XMl数据集合
+    	private List&lt;Person&gt; list;
+    	// 调用对象
+    	private Person person;
+    	// 标记开始标签
+    	private String tag;
+    	public List&lt;Person&gt; getList() {
+    		return list;
+    	}
+    	public void setList(List&lt;Person&gt; list) {
+    		this.list = list;
+    	}
+    	public Person getPerson() {
+    		return person;
+    	}
+    	public void setPerson(Person person) {
+    		this.person = person;
+    	}
+    	public String getTag() {
+    		return tag;
+    	}
+    	public void setTag(String tag) {
+    		this.tag = tag;
+    	}
+    	@Override
+    	public void startDocument() throws SAXException {
+    		System.out.println(1);
+    		// 初始化集合
+    		list = new ArrayList&lt;Person&gt;();
+    	}
+    	@Override
+    	public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
+    		System.out.println(2);
+    		// qName标签名
+    		tag = qName;
+    		// 如果标签名等于person时初始化Person对象
+    		if(tag.equals(&quot;person&quot;)){
+    			person = new Person();
+    		}
+    	}
+    	@Override
+    	public void endElement(String uri, String localName, String qName) throws SAXException {
+    		System.out.println(3);
+    		// 这句话，必须写，因为，当sax解析完一个元素的时候，会自动认为换行符是一个字符，会继续执行 character 方法 。如果不写，就会造成没有数据的现象。 
+            tag=&quot;&quot;;
+            
+            if(qName.equals(&quot;person&quot;)){
+            	list.add(person);
+            }
+    		
+    	}
+    	@Override
+    	public void characters(char[] ch, int start, int length) throws SAXException {
+    		System.out.println(4);
+    //      这里是内容，但是，无法直接判断属于哪一个元素。
+            String string = new String(ch, start, length);
+            if (&quot;name&quot;.equals(tag)) {//判断当前内容，属于哪一个元素。
+                person.setName(string);
+            }else if (&quot;age&quot;.equals(tag)) {
+                person.setAge(string);
+            }//这两种情况，表示 当前语句执行在 girls 标签内。
+    	}
+    }
+</code></pre></div><ul><li>测试类</li></ul> <div class="language- extra-class"><pre class="language-text"><code>    public static void main(String[] args) {
+		
+		//1.创建对象
+        SAXParserFactory newInstance = SAXParserFactory.newInstance();
+        try {
+//      2.获取解析器 
+            SAXParser saxParser = newInstance.newSAXParser();
+//      3.调用方法开始解析xml   
+//            File file = new File(&quot;student.xml&quot;);
+            MyHandler dh = new MyHandler();
+            saxParser.parse(TestSAX.class.getResourceAsStream(&quot;/students.xml&quot;), dh);
+            List&lt;Person&gt; list =dh.getList();
+//      4.输出集合
+            System.out.println(list);
+        } catch (Exception e) {
+        } 
+	}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>    &lt;?xml version =&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+    &lt;persons&gt;
+    	&lt;person&gt;
+    		&lt;name&gt;东东&lt;/name&gt;
+    		&lt;age&gt;15&lt;/age&gt;
+    	&lt;/person&gt;
+    	&lt;person&gt;
+    		&lt;name&gt;小凤&lt;/name&gt;
+    		&lt;age&gt;15&lt;/age&gt;
+    	&lt;/person&gt;
+    &lt;/persons&gt;
+</code></pre></div></div> <div class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">5/29/2019, 8:43:11 PM</span></div></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/myblog/Java/JavaBase/IO流3.html" class="prev">
+          IO流3
+        </a></span> <span class="next"><a href="/myblog/Java/JavaBase/异常.html">
+          异常
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/myblog/assets/js/app.0c6a3e6f.js" defer></script><script src="/myblog/assets/js/22.caad605c.js" defer></script>
+  </body>
+</html>

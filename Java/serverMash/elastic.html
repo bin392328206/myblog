@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>elastic技术栈 学习 包括 ELK  和EFk | jimmy(六脉神剑)</title>
+    <meta name="description" content="种一棵树最好的时候是十年前">
+    
+    
+    <link rel="preload" href="/myblog/assets/css/0.styles.bb285c56.css" as="style"><link rel="preload" href="/myblog/assets/js/app.0c6a3e6f.js" as="script"><link rel="preload" href="/myblog/assets/js/38.9795f763.js" as="script"><link rel="prefetch" href="/myblog/assets/js/10.86e4b344.js"><link rel="prefetch" href="/myblog/assets/js/11.6bf75294.js"><link rel="prefetch" href="/myblog/assets/js/12.6a5fe9aa.js"><link rel="prefetch" href="/myblog/assets/js/13.c8027a8a.js"><link rel="prefetch" href="/myblog/assets/js/14.ba727d81.js"><link rel="prefetch" href="/myblog/assets/js/15.7aecfee7.js"><link rel="prefetch" href="/myblog/assets/js/16.f32dfcd4.js"><link rel="prefetch" href="/myblog/assets/js/17.f24bdcb9.js"><link rel="prefetch" href="/myblog/assets/js/18.8645cc73.js"><link rel="prefetch" href="/myblog/assets/js/19.e342a0be.js"><link rel="prefetch" href="/myblog/assets/js/2.03feb64a.js"><link rel="prefetch" href="/myblog/assets/js/20.8ac192ce.js"><link rel="prefetch" href="/myblog/assets/js/21.ac99894d.js"><link rel="prefetch" href="/myblog/assets/js/22.caad605c.js"><link rel="prefetch" href="/myblog/assets/js/23.fbd832c0.js"><link rel="prefetch" href="/myblog/assets/js/24.dcdc9d21.js"><link rel="prefetch" href="/myblog/assets/js/25.b06028eb.js"><link rel="prefetch" href="/myblog/assets/js/26.524af8a3.js"><link rel="prefetch" href="/myblog/assets/js/27.81a7f7a3.js"><link rel="prefetch" href="/myblog/assets/js/28.41a9ff2e.js"><link rel="prefetch" href="/myblog/assets/js/29.2f542642.js"><link rel="prefetch" href="/myblog/assets/js/3.4ada0c35.js"><link rel="prefetch" href="/myblog/assets/js/30.f94836cf.js"><link rel="prefetch" href="/myblog/assets/js/31.81d5337f.js"><link rel="prefetch" href="/myblog/assets/js/32.3fea46b6.js"><link rel="prefetch" href="/myblog/assets/js/33.eb59c615.js"><link rel="prefetch" href="/myblog/assets/js/34.c7a75edb.js"><link rel="prefetch" href="/myblog/assets/js/35.5eb6855b.js"><link rel="prefetch" href="/myblog/assets/js/36.2e5cb9bf.js"><link rel="prefetch" href="/myblog/assets/js/37.69fe98f5.js"><link rel="prefetch" href="/myblog/assets/js/39.d5dce79b.js"><link rel="prefetch" href="/myblog/assets/js/4.1750788b.js"><link rel="prefetch" href="/myblog/assets/js/40.2103c17a.js"><link rel="prefetch" href="/myblog/assets/js/41.f5ea1578.js"><link rel="prefetch" href="/myblog/assets/js/42.72e5e6ab.js"><link rel="prefetch" href="/myblog/assets/js/43.80f5b6c8.js"><link rel="prefetch" href="/myblog/assets/js/44.055648bd.js"><link rel="prefetch" href="/myblog/assets/js/45.a3a6bde8.js"><link rel="prefetch" href="/myblog/assets/js/46.6dc3a768.js"><link rel="prefetch" href="/myblog/assets/js/47.26b73fda.js"><link rel="prefetch" href="/myblog/assets/js/48.566985e8.js"><link rel="prefetch" href="/myblog/assets/js/49.4e35fbc0.js"><link rel="prefetch" href="/myblog/assets/js/5.8bab9c37.js"><link rel="prefetch" href="/myblog/assets/js/50.7586c5df.js"><link rel="prefetch" href="/myblog/assets/js/51.ba057a22.js"><link rel="prefetch" href="/myblog/assets/js/52.538dfc53.js"><link rel="prefetch" href="/myblog/assets/js/53.0b9901c3.js"><link rel="prefetch" href="/myblog/assets/js/54.4b08cec5.js"><link rel="prefetch" href="/myblog/assets/js/55.15dfc3a4.js"><link rel="prefetch" href="/myblog/assets/js/56.18d2a3c1.js"><link rel="prefetch" href="/myblog/assets/js/57.38814818.js"><link rel="prefetch" href="/myblog/assets/js/6.e81ea5f3.js"><link rel="prefetch" href="/myblog/assets/js/7.f4baaa53.js"><link rel="prefetch" href="/myblog/assets/js/8.609aaec0.js"><link rel="prefetch" href="/myblog/assets/js/9.bf8da6ba.js">
+    <link rel="stylesheet" href="/myblog/assets/css/0.styles.bb285c56.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/myblog/" class="home-link router-link-active"><!----> <span class="site-name">jimmy(六脉神剑)</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/myblog/Java/" class="nav-link router-link-active">Java</a></div><div class="nav-item"><a href="/myblog/H5/" class="nav-link">前端</a></div><div class="nav-item"><a href="/myblog/go/" class="nav-link">Go</a></div><div class="nav-item"><a href="/myblog/BigData/" class="nav-link">大数据</a></div><div class="nav-item"><a href="/myblog/Thought/" class="nav-link">随笔</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">其他学习文档</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="http://www.wangbin.shop:8080" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  王斌学习博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://wangchujiang.com/linux-command/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Linux命令学习
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://blog.didispace.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  DD博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.hollischuang.com/archives/3280" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Java成神之路
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">在线工具</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://smallpdf.com/cn/pdf-to-word" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  PDF转换器
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.json.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  JSON编辑器
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://tableconvert.com/?output=text&amp;data=id%2C%20name%2C%20age%2C%20gender%0A1%2C%20Lawrence%2C%2039%2C%20M%0A2%2C%20Oliver%2C%2025%2C%20M%0A3%2C%20Roberta%2C%2017%2C%20F%0A4%2C%20Bamboo%2C%2070%2C%20F%0A" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  MD表格生成
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://cron.qqe2.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  CRON表达式
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://tool.oschina.net/codeformat/html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  代码格式化
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.toyaml.com/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  YAML-&gt;properties
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <a href="https://github.com/bin392328206/myblog.git" target="_blank" rel="noopener noreferrer" class="repo-link">
+    My GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/myblog/Java/" class="nav-link router-link-active">Java</a></div><div class="nav-item"><a href="/myblog/H5/" class="nav-link">前端</a></div><div class="nav-item"><a href="/myblog/go/" class="nav-link">Go</a></div><div class="nav-item"><a href="/myblog/BigData/" class="nav-link">大数据</a></div><div class="nav-item"><a href="/myblog/Thought/" class="nav-link">随笔</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">其他学习文档</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="http://www.wangbin.shop:8080" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  王斌学习博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://wangchujiang.com/linux-command/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Linux命令学习
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://blog.didispace.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  DD博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.hollischuang.com/archives/3280" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Java成神之路
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">在线工具</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://smallpdf.com/cn/pdf-to-word" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  PDF转换器
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.json.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  JSON编辑器
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://tableconvert.com/?output=text&amp;data=id%2C%20name%2C%20age%2C%20gender%0A1%2C%20Lawrence%2C%2039%2C%20M%0A2%2C%20Oliver%2C%2025%2C%20M%0A3%2C%20Roberta%2C%2017%2C%20F%0A4%2C%20Bamboo%2C%2070%2C%20F%0A" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  MD表格生成
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://cron.qqe2.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  CRON表达式
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://tool.oschina.net/codeformat/html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  代码格式化
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.toyaml.com/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  YAML-&gt;properties
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <a href="https://github.com/bin392328206/myblog.git" target="_blank" rel="noopener noreferrer" class="repo-link">
+    My GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first collapsable"><p class="sidebar-heading"><span>Java基础</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>JavaWep</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>Java框架</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>分布式</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>数据库</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>中间件</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>Linux 和 容器</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>服务网格</span> <span class="arrow down"></span></p> <ul class="sidebar-group-items"><li><a href="/myblog/Java/serverMash/servermash.html" class="sidebar-link">服务网格介绍</a></li><li><a href="/myblog/Java/serverMash/elastic.html" class="active sidebar-link">elastic技术栈</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myblog/Java/serverMash/elastic.html#elasticsearch是什么" class="sidebar-link">Elasticsearch是什么:</a></li><li class="sidebar-sub-header"><a href="/myblog/Java/serverMash/elastic.html#elasticsearch的特性" class="sidebar-link">Elasticsearch的特性:</a></li><li class="sidebar-sub-header"><a href="/myblog/Java/serverMash/elastic.html#基本查询" class="sidebar-link">基本查询</a></li><li class="sidebar-sub-header"><a href="/myblog/Java/serverMash/elastic.html#高级查询" class="sidebar-link">高级查询</a></li><li class="sidebar-sub-header"><a href="/myblog/Java/serverMash/elastic.html#排序" class="sidebar-link">排序</a></li><li class="sidebar-sub-header"><a href="/myblog/Java/serverMash/elastic.html#聚合aggregations" class="sidebar-link">聚合aggregations</a></li><li class="sidebar-sub-header"><a href="/myblog/Java/serverMash/elastic.html#es的数据类型我认为可以分为2类-确却值-和-全文文本-（非结构化数据）、" class="sidebar-link">es的数据类型我认为可以分为2类  确却值 和 全文文本 （非结构化数据）、</a></li><li class="sidebar-sub-header"><a href="/myblog/Java/serverMash/elastic.html#es的倒排索引" class="sidebar-link">es的倒排索引</a></li><li class="sidebar-sub-header"><a href="/myblog/Java/serverMash/elastic.html#es的分析器" class="sidebar-link">es的分析器</a></li><li class="sidebar-sub-header"><a href="/myblog/Java/serverMash/elastic.html#搜索选项" class="sidebar-link">搜索选项</a></li></ul></li><li><a href="/myblog/Java/serverMash/k8s.html" class="sidebar-link">k8s技术栈</a></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="elastic技术栈-学习-包括-elk-和efk"><a href="#elastic技术栈-学习-包括-elk-和efk" aria-hidden="true" class="header-anchor">#</a> elastic技术栈 学习 包括 ELK  和EFk</h1> <h3 id="部署注意事项"><a href="#部署注意事项" aria-hidden="true" class="header-anchor">#</a> 部署注意事项</h3> <ul><li>必须不能使用 root  账户去部署它 这是它的一种保护机制</li> <li>在/etc/sysctl.conf 里面加入 vm.max_map_count=262144 然后重启</li> <li>采坑就是如果你在宿主机挂载了 数据卷 你就要给他权限 不然它没法启动 原因是会导致容器的数据不能加载</li></ul> <h3 id="下面是是几篇学习文档"><a href="#下面是是几篇学习文档" aria-hidden="true" class="header-anchor">#</a> 下面是是几篇学习文档</h3> <ul><li><a href="https://www.docker.elastic.co/" target="_blank" rel="noopener noreferrer">官方的镜像地址<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://www.elastic.co/cn/" target="_blank" rel="noopener noreferrer">官方文档<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://hub.docker.com/r/sebp/elk/" target="_blank" rel="noopener noreferrer">elk集成镜像<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://juejin.im/post/5ba4c8ef6fb9a05d082a1f53" target="_blank" rel="noopener noreferrer">安装文档elk集成方式<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul> <h3 id="docker-compose-es-和kbana"><a href="#docker-compose-es-和kbana" aria-hidden="true" class="header-anchor">#</a> docker-compose Es 和Kbana</h3> <pre><code>version: '2'
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.5.4
+    environment:
+      - &quot;ES_JAVA_OPTS=-Xms512m -Xmx512m&quot;
+    volumes:
+      - ./elasticsearch/data:/usr/share/elasticsearch/data
+    hostname: elasticsearch
+    restart: always
+    ports:
+      - &quot;9200:9200&quot;
+      - &quot;9300:9300&quot;
+  kibana:
+    image: docker.elastic.co/kibana/kibana:6.5.4
+    environment:
+      - ELASTICSEARCH_URL=http://elasticsearch:9200 #elasticsearch查询接口地址
+    hostname: kibana
+    depends_on:
+      - elasticsearch  #后于elasticsearch启动
+    restart: always
+    ports:
+      - &quot;5601:5601&quot;
+</code></pre> <h2 id="elasticsearch是什么"><a href="#elasticsearch是什么" aria-hidden="true" class="header-anchor">#</a> Elasticsearch是什么:</h2> <ul><li>分布式的Restful实时搜索和分析引擎</li> <li>分布式的实时文件存储,每个字段都被索引并可被搜索</li> <li>高扩展性,可扩展至上百台服务器,处理PB级结构化或非结构化数据</li> <li>Elasticsearch用于全文检索,结构化搜索,分析/合并使用</li></ul> <h2 id="elasticsearch的特性"><a href="#elasticsearch的特性" aria-hidden="true" class="header-anchor">#</a> Elasticsearch的特性:</h2> <ul><li>Elasticsearch没有典型意义的事务(无事务性)</li> <li>Elasticsearch是一种面向文档的数据库</li> <li>Elasticsearch没有提供授权和认证特性</li></ul> <h3 id="es-的基本用法"><a href="#es-的基本用法" aria-hidden="true" class="header-anchor">#</a> es 的基本用法</h3> <p>1.0 创建 索引 类似于 mysql 创建数据
+2.0文档 存入索引库的原始数据 比如一个商品的 全部信息就是一个文档
+3.0 字段 就是 文档里面具体的属性 和mysql
+4.0映射配置 用来定义文档中的属性是否被存储 是否索引 字段的类型等</p> <p>es一些主要的字段的属性的 类型</p> <p>1.type的分类
+类似于 String 的 分为2种
+text:可分词，不可以参与聚合
+keyword: 不可分词 数据会作为完整的字段进行匹配 可以参与聚合</p> <p>Numerical 分2类
+基本数据类型: long interger shortn byte doublle float half_float
+浮点数高精度类型 ：scaled_float<br>
+Date 类
+elasticsearch可以对日期格式化为字符串存储，但是建议我们存储为毫秒值，存储为long，节省空间</p> <p>2.index
+他可以影响字段是否被索引  true 可以被索引  就是可以用来被搜索  false相反  index的 默认值是true 所以我们需要将不需要被搜索的字段变成false</p> <p>3.store
+是否将数据进行额外存储。
+在学习lucene和solr时，我们知道如果一个字段的store设置为false，那么在文档列表中就不会有这个字段的值，用户
+的搜索结果中不会显示出来。
+但是在Elasticsearch中，即便store设置为false，也可以搜索到结果。
+原因是Elasticsearch在创建文档索引时，会将文档中的原始数据备份，保存到一个叫做_source的属性中。而且我
+们可以通过过滤_source来选择哪些要显示，哪些不显示。
+而如果设置store为true，就会在_source以外额外存储一份数据，多余，因此一般我们都会将store设置为false，事
+实上，store的默认值就是false。</p> <h2 id="基本查询"><a href="#基本查询" aria-hidden="true" class="header-anchor">#</a> 基本查询</h2> <p>GET /索引库名/_search
+{ &quot;query&quot;:
+{ &quot;查询类型&quot;:
+{ &quot;查询条件&quot;:&quot;查询条件值&quot; }
+}
+}<br>
+这里的query代表一个查询对象，里面可以有不同的查询属性查询类型：例如：match_all， match，term ， range 等等查询条件：
+查询条件会根据类型的不同，写法也有差异，后面详细讲解
+{
+&quot;took&quot; : 1,
+&quot;timed_out&quot; : false,
+&quot;_shards&quot; : {
+&quot;total&quot; : 1,
+&quot;successful&quot; : 1,
+&quot;skipped&quot; : 0,
+&quot;failed&quot; : 0
+},
+&quot;hits&quot; : {
+&quot;total&quot; : 2,
+&quot;max_score&quot; : 1.0,
+&quot;hits&quot; : [
+{
+&quot;_index&quot; : &quot;tecode&quot;,
+&quot;_type&quot; : &quot;goods&quot;,
+&quot;_id&quot; : &quot;5BVnzGsBCun8lUkrnfMz&quot;,
+&quot;_score&quot; : 1.0,
+&quot;_source&quot; : {
+&quot;title&quot; : &quot;小王手机&quot;,
+&quot;images&quot; : &quot;www.wangbin.ship:8080&quot;,
+&quot;price&quot; : &quot;123&quot;
+}
+},
+{
+&quot;_index&quot; : &quot;tecode&quot;,
+&quot;_type&quot; : &quot;goods&quot;,
+&quot;_id&quot; : &quot;3&quot;,
+&quot;_score&quot; : 1.0,
+&quot;_source&quot; : {
+&quot;title&quot; : &quot;超迷手机&quot;,
+&quot;images&quot; : &quot;http//images&quot;,
+&quot;price&quot; : &quot;122&quot;,
+&quot;stock&quot; : &quot;22&quot;,
+}
+}
+]
+}
+}
+took：查询花费时间，单位是毫秒time_out：是否超时_shards：分片信息hits：搜索结果总览对象total：搜索到的总条数max_score：所有结果中文档得分的hits：搜索结果的文档对象数组，每_index：索引库_type：文档类型_id：文档id_score：文档得分_source：文档的源数据</p> <h3 id="查询的几种方式"><a href="#查询的几种方式" aria-hidden="true" class="header-anchor">#</a> 查询的几种方式</h3> <pre><code>match_all  查询所有
+match 匹配查询
+multi_match 多字段查询
+term 词条匹配 精确查询
+terms 多词条 精确查询 匹配
+</code></pre> <p>3.2.结果过滤
+默认情况下，elasticsearch在搜索的结果中，会把文档中保存在_source的所有字段都返回。
+如果我们只想获取其中的部分字段，我们可以添加_source的过滤
+includes：来指定想要显示的字段excludes：来指定不想要显示的字</p> <h2 id="高级查询"><a href="#高级查询" aria-hidden="true" class="header-anchor">#</a> 高级查询</h2> <ul><li>布尔组合（bool)
+bool把各种其它查询通过must（与）、must_not（非）、should（或）的方式进行组合</li> <li>范围查询(range)
+有以下范围 gt 大于  gte大于等于  lt小于 lte小于等于</li> <li>模糊查询(fuzzy)
+fuzzy 查询是 term 查询的模糊等价。它允许用户搜索词条与实际词条的拼写出现偏差，但是偏差的编辑距离不得
+超过2： GET /heima/_search { &quot;query&quot;: { &quot;fuzzy&quot;: { &quot;title&quot;: &quot;appla&quot; } } } 这种类似</li></ul> <h2 id="排序"><a href="#排序" aria-hidden="true" class="header-anchor">#</a> 排序</h2> <p>sort 可以让我们按照不同的字段进行排序，并且通过order指定排序的方式</p> <h2 id="聚合aggregations"><a href="#聚合aggregations" aria-hidden="true" class="header-anchor">#</a> 聚合aggregations</h2> <p>Elasticsearch中的聚合，包含多种类型，最常用的两种，一个叫桶，一个叫度量：   桶的概念 就是就我理解 就是 用来分组 的 他只管分组   度量 就是 计算 分完组了 当时要计算 然后把结果展示
+综上所述，我们发现bucket aggregations 一种聚合：metrics aggregations即度量
+桶内度量</p> <p>桶内嵌套套桶</p> <h3 id="elasticsearch致力于隐藏分布式系统的复杂性。以下这些操作都是在底层自动完成的-天生的分布式集群-："><a href="#elasticsearch致力于隐藏分布式系统的复杂性。以下这些操作都是在底层自动完成的-天生的分布式集群-：" aria-hidden="true" class="header-anchor">#</a> Elasticsearch致力于隐藏分布式系统的复杂性。以下这些操作都是在底层自动完成的 (天生的分布式集群)：</h3> <p>将你的文档分区到不同的容器或者分片(shards)中，它们可以存在于一个或多个节点中。
+将分片均匀的分配到各个节点，对索引和搜索做负载均衡。
+冗余每一个分片，防止硬件故障造成的数据丢失。
+将集群中任意一个节点上的请求路由到相应数据所在的节点。
+无论是增加节点，还是移除节点，分片都可以做到无缝的扩展和迁移。</p> <p>Elasticsearch用于构建高可用和可扩展的系统。扩展的方式可以是购买更好的服务器(纵向扩展(vertical scale or scaling up))或者购买更多的服务器（横向扩展(horizontal scale or scaling out)）。
+es的主从复制 数据同步 崩溃恢复</p> <h3 id="es的分片"><a href="#es的分片" aria-hidden="true" class="header-anchor">#</a> es的分片</h3> <ul><li>其实在es中 索引只是一个用来指向 一个或者多个分片 一个分片就是一个最小级别的工作单元 他只保存了索引中所有数据的一部分 分片就是一个lucene实例</li> <li>分片是Elasticsearch在集群中分发数据的关键。把分片想象成数据的容器。文档存储在分片中，然后分片分配到你集群中的节点上。当你的集群扩容或缩小，Elasticsearch将会自动在你的节点间迁移分片，以使集群保持平衡
+类似于 平衡2茶树</li> <li>主分片 是可以用来做数据的操作的 当一个索引的所有主分片处于 gree状态 那么此时就可以提供服务了 复制分片 是用来分配到各个子节点</li> <li>启动第二个节点 只要第二个节点与第一个节点有相同的cluster.name（请看./config/elasticsearch.yml文件），它就能自动发现并加入第一个节点所在的集群。如果没有，检查日志找出哪里出了问题。这可能是网络广播被禁用，或者防火墙阻止了节点通信。</li> <li>对于搜索 如果请求发到了 主分片 那么主分片 会把请求 轮寻的发送给其他节点的复制分片 然后通过通过复制分片找到文档返回给主节点 主节点返回给请求对象</li></ul> <h3 id="在集群系统中深度分页"><a href="#在集群系统中深度分页" aria-hidden="true" class="header-anchor">#</a> 在集群系统中深度分页</h3> <p>为了理解为什么深度分页是有问题的，让我们假设在一个有5个主分片的索引中搜索。当我们请求结果的第一页（结果1到10）时，每个分片产生自己最顶端10个结果然后返回它们给请求节点(requesting node)，它再排序这所有的50个结果以选出顶端的10个结果。
+现在假设我们请求第1000页——结果10001到10010。工作方式都相同，不同的是每个分片都必须产生顶端的10010个结果。然后请求节点排序这50050个结果并丢弃50040个！
+你可以看到在分布式系统中，排序结果的花费随着分页的深入而成倍增长。这也是为什么网络搜索引擎中任何语句不能返回多于1000个结果的原因。</p> <p>es的查询方式 分为2种 一种是 查询字符串  另外一种是请求体 叫做结构化查询语句(DSL)</p> <h2 id="es的数据类型我认为可以分为2类-确却值-和-全文文本-（非结构化数据）、"><a href="#es的数据类型我认为可以分为2类-确却值-和-全文文本-（非结构化数据）、" aria-hidden="true" class="header-anchor">#</a> es的数据类型我认为可以分为2类  确却值 和 全文文本 （非结构化数据）、</h2> <p>而对于全文数据的查询来说，却有些微妙。我们不会去询问这篇文档是否匹配查询要求？。 但是，我们会询问这篇文档和查询的匹配程度如何？。换句话说，对于查询条件，这篇文档的相关性有多高？</p> <h2 id="es的倒排索引"><a href="#es的倒排索引" aria-hidden="true" class="header-anchor">#</a> es的倒排索引</h2> <p>我们把es的文档 把他们分词 然后把每个词都索引 当检索关键字的时候 就可以查询到他们的相关性 也就是说通过这种方式 加上相似度算法</p> <h2 id="es的分析器"><a href="#es的分析器" aria-hidden="true" class="header-anchor">#</a> es的分析器</h2> <p>一个分析器需要包括三个功能</p> <ul><li>字符过滤器</li> <li>分词器</li> <li>标记过滤</li></ul> <h3 id="相关性排序"><a href="#相关性排序" aria-hidden="true" class="header-anchor">#</a> 相关性排序</h3> <p>默认情况下，结果集会按照相关性进行排序 -- 相关性越高，排名越靠前。 这一章我们会讲述相关性是什么以及它是如何计算的。 在此之前，我们先看一下sort参数的使用方法。</p> <h3 id="相关性简介"><a href="#相关性简介" aria-hidden="true" class="header-anchor">#</a> 相关性简介</h3> <p>查询语句会为每个文档添加一个 _score 字段。评分的计算方式取决于不同的查询类型 -- 不同的查询语句用于不同的目的：fuzzy 查询会计算与关键词的拼写相似程度，terms查询会计算 找到的内容与关键词组成部分匹配的百分比，但是一般意义上我们说的全文本搜索是指计算内容与关键词的类似程度。
+ElasticSearch的相似度算法被定义为 TF/IDF，即检索词频率/反向文档频率，包括一下内容：</p> <ul><li>检索词频率::检索词在该字段出现的频率？出现频率越高，相关性也越高。 字段中出现过5次要比只出现过1次的相关性高</li> <li>反向文档频率::每个检索词在索引中出现的频率？频率越高，相关性越低。 检索词出现在多数文档中会比出现在少数文档中的权重更低， 即检验一个检索词在文档中的普遍重要性。</li> <li>字段长度准则::字段的长度是多少？长度越长，相关性越低。 检索词出现在一个短的 title 要比同样的词出现在一个长的 content 字段。</li> <li>我们可以在开发环境用explain参数来调试 当前查询为何会得到以下相关性数据</li> <li>重要： ElasticSearch将所有字段数据加载到内存中并不是匹配到的那部分数据。 而是索引下所有文档中的值，包括所有类型。</li></ul> <h3 id="es分布式搜索的执行方式"><a href="#es分布式搜索的执行方式" aria-hidden="true" class="header-anchor">#</a> es分布式搜索的执行方式</h3> <p>由于不知道哪个文档会匹配查询（文档可能存放在集群中的任意分片上），所以搜索需要一个更复杂的模型。一个搜索不得不通过查询每一个我们感兴趣的索引的分片副本，来看是否含有任何匹配的文档。
+但是，找到所有匹配的文档只完成了这件事的一半。在搜索（search）API返回一页结果前，来自多个分片的结果必须被组合放到一个有序列表中。因此，搜索的执行过程分两个阶段，称为查询然后取回（query then fetch）。
+分布式搜索查询阶段</p> <ul><li>第一步是向索引里的每个节点的分片副本广播请求。就像document的GET请求一样，搜索请求可以被每个分片的原本或任意副本处理。这就是更多的副本（当结合更多的硬件时）如何提高搜索的吞吐量的方法。对于后续请求，协调节点会轮询所有的分片副本以分摊负载。</li> <li>每一个分片在本地执行查询和建立一个长度为from+size的有序优先队列——这个长度意味着它自己的结果数量就足够满足全局的请求要求。分片返回一个轻量级的结果列表给协调节点。只包含documentID值和排序需要用到的值，例如_score。</li> <li>整个过程类似于归并排序算法，先分组排序再归并到一起，对于这种分布式场景非常适用。</li></ul> <h2 id="搜索选项"><a href="#搜索选项" aria-hidden="true" class="header-anchor">#</a> 搜索选项</h2> <p>些查询字符串（query-string）可选参数能够影响搜索过程。 preference（偏爱）</p> <p>结果震荡（Bouncing Results）
+想像一下，你正在按照timestamp字段来对你的结果排序，并且有两个document有相同的timestamp。由于搜索请求是在所有有效的分片副本间轮询的，这两个document可能在原始分片里是一种顺序，在副本分片里是另一种顺序。
+这就是被称为结果震荡（bouncing results）的问题：用户每次刷新页面，结果顺序会发生变化。避免这个问题方法是对于同一个用户总是使用同一个分片。方法就是使用一个随机字符串例如用户的会话ID（session ID）来设置preference参数。</p></div> <div class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">10/11/2019, 5:41:36 PM</span></div></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/myblog/Java/serverMash/servermash.html" class="prev">
+          服务网格介绍
+        </a></span> <span class="next"><a href="/myblog/Java/serverMash/k8s.html">
+          k8s技术栈
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/myblog/assets/js/app.0c6a3e6f.js" defer></script><script src="/myblog/assets/js/38.9795f763.js" defer></script>
+  </body>
+</html>

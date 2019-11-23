@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>流程控制语句 | jimmy(六脉神剑)</title>
+    <meta name="description" content="种一棵树最好的时候是十年前">
+    
+    
+    <link rel="preload" href="/myblog/assets/css/0.styles.bb285c56.css" as="style"><link rel="preload" href="/myblog/assets/js/app.0c6a3e6f.js" as="script"><link rel="preload" href="/myblog/assets/js/21.ac99894d.js" as="script"><link rel="prefetch" href="/myblog/assets/js/10.86e4b344.js"><link rel="prefetch" href="/myblog/assets/js/11.6bf75294.js"><link rel="prefetch" href="/myblog/assets/js/12.6a5fe9aa.js"><link rel="prefetch" href="/myblog/assets/js/13.c8027a8a.js"><link rel="prefetch" href="/myblog/assets/js/14.ba727d81.js"><link rel="prefetch" href="/myblog/assets/js/15.7aecfee7.js"><link rel="prefetch" href="/myblog/assets/js/16.f32dfcd4.js"><link rel="prefetch" href="/myblog/assets/js/17.f24bdcb9.js"><link rel="prefetch" href="/myblog/assets/js/18.8645cc73.js"><link rel="prefetch" href="/myblog/assets/js/19.e342a0be.js"><link rel="prefetch" href="/myblog/assets/js/2.03feb64a.js"><link rel="prefetch" href="/myblog/assets/js/20.8ac192ce.js"><link rel="prefetch" href="/myblog/assets/js/22.caad605c.js"><link rel="prefetch" href="/myblog/assets/js/23.fbd832c0.js"><link rel="prefetch" href="/myblog/assets/js/24.dcdc9d21.js"><link rel="prefetch" href="/myblog/assets/js/25.b06028eb.js"><link rel="prefetch" href="/myblog/assets/js/26.524af8a3.js"><link rel="prefetch" href="/myblog/assets/js/27.81a7f7a3.js"><link rel="prefetch" href="/myblog/assets/js/28.41a9ff2e.js"><link rel="prefetch" href="/myblog/assets/js/29.2f542642.js"><link rel="prefetch" href="/myblog/assets/js/3.4ada0c35.js"><link rel="prefetch" href="/myblog/assets/js/30.f94836cf.js"><link rel="prefetch" href="/myblog/assets/js/31.81d5337f.js"><link rel="prefetch" href="/myblog/assets/js/32.3fea46b6.js"><link rel="prefetch" href="/myblog/assets/js/33.eb59c615.js"><link rel="prefetch" href="/myblog/assets/js/34.c7a75edb.js"><link rel="prefetch" href="/myblog/assets/js/35.5eb6855b.js"><link rel="prefetch" href="/myblog/assets/js/36.2e5cb9bf.js"><link rel="prefetch" href="/myblog/assets/js/37.69fe98f5.js"><link rel="prefetch" href="/myblog/assets/js/38.9795f763.js"><link rel="prefetch" href="/myblog/assets/js/39.d5dce79b.js"><link rel="prefetch" href="/myblog/assets/js/4.1750788b.js"><link rel="prefetch" href="/myblog/assets/js/40.2103c17a.js"><link rel="prefetch" href="/myblog/assets/js/41.f5ea1578.js"><link rel="prefetch" href="/myblog/assets/js/42.72e5e6ab.js"><link rel="prefetch" href="/myblog/assets/js/43.80f5b6c8.js"><link rel="prefetch" href="/myblog/assets/js/44.055648bd.js"><link rel="prefetch" href="/myblog/assets/js/45.a3a6bde8.js"><link rel="prefetch" href="/myblog/assets/js/46.6dc3a768.js"><link rel="prefetch" href="/myblog/assets/js/47.26b73fda.js"><link rel="prefetch" href="/myblog/assets/js/48.566985e8.js"><link rel="prefetch" href="/myblog/assets/js/49.4e35fbc0.js"><link rel="prefetch" href="/myblog/assets/js/5.8bab9c37.js"><link rel="prefetch" href="/myblog/assets/js/50.7586c5df.js"><link rel="prefetch" href="/myblog/assets/js/51.ba057a22.js"><link rel="prefetch" href="/myblog/assets/js/52.538dfc53.js"><link rel="prefetch" href="/myblog/assets/js/53.0b9901c3.js"><link rel="prefetch" href="/myblog/assets/js/54.4b08cec5.js"><link rel="prefetch" href="/myblog/assets/js/55.15dfc3a4.js"><link rel="prefetch" href="/myblog/assets/js/56.18d2a3c1.js"><link rel="prefetch" href="/myblog/assets/js/57.38814818.js"><link rel="prefetch" href="/myblog/assets/js/6.e81ea5f3.js"><link rel="prefetch" href="/myblog/assets/js/7.f4baaa53.js"><link rel="prefetch" href="/myblog/assets/js/8.609aaec0.js"><link rel="prefetch" href="/myblog/assets/js/9.bf8da6ba.js">
+    <link rel="stylesheet" href="/myblog/assets/css/0.styles.bb285c56.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/myblog/" class="home-link router-link-active"><!----> <span class="site-name">jimmy(六脉神剑)</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/myblog/Java/" class="nav-link router-link-active">Java</a></div><div class="nav-item"><a href="/myblog/H5/" class="nav-link">前端</a></div><div class="nav-item"><a href="/myblog/go/" class="nav-link">Go</a></div><div class="nav-item"><a href="/myblog/BigData/" class="nav-link">大数据</a></div><div class="nav-item"><a href="/myblog/Thought/" class="nav-link">随笔</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">其他学习文档</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="http://www.wangbin.shop:8080" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  王斌学习博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://wangchujiang.com/linux-command/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Linux命令学习
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://blog.didispace.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  DD博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.hollischuang.com/archives/3280" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Java成神之路
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">在线工具</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://smallpdf.com/cn/pdf-to-word" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  PDF转换器
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.json.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  JSON编辑器
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://tableconvert.com/?output=text&amp;data=id%2C%20name%2C%20age%2C%20gender%0A1%2C%20Lawrence%2C%2039%2C%20M%0A2%2C%20Oliver%2C%2025%2C%20M%0A3%2C%20Roberta%2C%2017%2C%20F%0A4%2C%20Bamboo%2C%2070%2C%20F%0A" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  MD表格生成
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://cron.qqe2.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  CRON表达式
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://tool.oschina.net/codeformat/html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  代码格式化
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.toyaml.com/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  YAML-&gt;properties
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <a href="https://github.com/bin392328206/myblog.git" target="_blank" rel="noopener noreferrer" class="repo-link">
+    My GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/myblog/Java/" class="nav-link router-link-active">Java</a></div><div class="nav-item"><a href="/myblog/H5/" class="nav-link">前端</a></div><div class="nav-item"><a href="/myblog/go/" class="nav-link">Go</a></div><div class="nav-item"><a href="/myblog/BigData/" class="nav-link">大数据</a></div><div class="nav-item"><a href="/myblog/Thought/" class="nav-link">随笔</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">其他学习文档</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="http://www.wangbin.shop:8080" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  王斌学习博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://wangchujiang.com/linux-command/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Linux命令学习
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://blog.didispace.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  DD博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.hollischuang.com/archives/3280" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Java成神之路
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">在线工具</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://smallpdf.com/cn/pdf-to-word" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  PDF转换器
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.json.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  JSON编辑器
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://tableconvert.com/?output=text&amp;data=id%2C%20name%2C%20age%2C%20gender%0A1%2C%20Lawrence%2C%2039%2C%20M%0A2%2C%20Oliver%2C%2025%2C%20M%0A3%2C%20Roberta%2C%2017%2C%20F%0A4%2C%20Bamboo%2C%2070%2C%20F%0A" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  MD表格生成
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://cron.qqe2.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  CRON表达式
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://tool.oschina.net/codeformat/html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  代码格式化
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.toyaml.com/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  YAML-&gt;properties
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <a href="https://github.com/bin392328206/myblog.git" target="_blank" rel="noopener noreferrer" class="repo-link">
+    My GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first collapsable"><p class="sidebar-heading open"><span>Java基础</span> <span class="arrow down"></span></p> <ul class="sidebar-group-items"><li><a href="/myblog/Java/JavaBase/JavaFist.html" class="sidebar-link">了解Java</a></li><li><a href="/myblog/Java/JavaBase/Java流程控制语句.html" class="active sidebar-link">流程控制语句</a></li><li><a href="/myblog/Java/JavaBase/数组.html" class="sidebar-link">数组</a></li><li><a href="/myblog/Java/JavaBase/二维数组与方法.html" class="sidebar-link">二维数组与方法</a></li><li><a href="/myblog/Java/JavaBase/IO流1.html" class="sidebar-link">IO流1</a></li><li><a href="/myblog/Java/JavaBase/IO流2.html" class="sidebar-link">IO流2</a></li><li><a href="/myblog/Java/JavaBase/IO流3.html" class="sidebar-link">IO流3</a></li><li><a href="/myblog/Java/JavaBase/JsonAndXML.html" class="sidebar-link">JsonAndXML</a></li><li><a href="/myblog/Java/JavaBase/异常.html" class="sidebar-link">异常</a></li><li><a href="/myblog/Java/JavaBase/网络基础.html" class="sidebar-link">网络基础</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>JavaWep</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>Java框架</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>分布式</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>数据库</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>中间件</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>Linux 和 容器</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>服务网格</span> <span class="arrow right"></span></p> <!----></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="流程控制语句"><a href="#流程控制语句" aria-hidden="true" class="header-anchor">#</a> 流程控制语句</h1> <h4 id="选择结构if"><a href="#选择结构if" aria-hidden="true" class="header-anchor">#</a> 选择结构if</h4> <blockquote><p>​接下来要学习的if条件语句分为三种语法格式，每一种格式都有它自身的特点，下面我们分别进行介绍</p></blockquote> <h5 id="if语句"><a href="#if语句" aria-hidden="true" class="header-anchor">#</a> if语句</h5> <blockquote><p>​	if语句是指如果满足某种条件，就进行某种处理。例如，小明妈妈跟小明说“如果你考试得了100分，星期天就带你去游乐场玩”。这句话可以通过下面的一段伪代码来描述</p> <div class="language- extra-class"><pre class="language-text"><code>如果小明考试得了100分
+	妈妈星期天带小明去游乐场
+</code></pre></div><p>​	在上面的伪代码中，“如果”相当于Java中的关键字if，“小明考试得了100分”是判断条件，需要用()括起来，“妈妈星期天带小明去游乐场”是执行语句，需要放在{}中。修改后的伪代码如下：</p> <div class="language- extra-class"><pre class="language-text"><code>if(小明考试得了100分){
+    妈妈星期天带小明去游乐场
+}
+</code></pre></div><p>​	上面的例子就描述了if语句的用法，在Java中，if语句的具体语法格式如下：</p> <div class="language- extra-class"><pre class="language-text"><code>if(条件语句){ // 条件语句判断是一个布尔值，当值位true时，{ }里面的执行语句才会执行
+    执行语句；
+}
+</code></pre></div><p>if语句的执行流程图:</p> <p><img src="https://note.youdao.com/yws/public/resource/905fe507d1dbcdd9d702e88e85feb62a/xmlnote/CE1589DC49A54149B65AA6977E1FE22B/28398" alt="1528738167033"></p> <p>上诉例子代码演示:</p> <div class="language- extra-class"><pre class="language-text"><code>public class Demo1{
+    public static void main(String[] args){
+        int xiaoMing = 100;
+        if(xiaoMing == 100){
+            System.out.println(&quot;妈妈星期天带小明去游乐场玩&quot;);
+        }
+    }
+}
+</code></pre></div></blockquote> <h5 id="if-else语句"><a href="#if-else语句" aria-hidden="true" class="header-anchor">#</a> if...else语句</h5> <blockquote><p>​	if…else语句是指如果满足某种条件，就进行某种处理，否则就进行另一种处理。例如，要判断一个正整数的奇偶，如果该数字能被2整除则是一个偶数，否则该数字就是一个奇数。if…else语句具体语法格式如下 :</p> <div class="language- extra-class"><pre class="language-text"><code>if(条件语句){
+    执行语句1；
+    ......
+}else{
+    执行语句2;
+    ......
+}
+</code></pre></div><p>​	上述代码中，判断条件是一个布尔值。当判断条件为true时，if后面{}中的执行语句1会执行。当判断条件为false时，else后面{}中的执行语句2会执行。</p> <p>if…else语句的执行流程如下图所示 ：</p> <p><img src="https://note.youdao.com/yws/public/resource/905fe507d1dbcdd9d702e88e85feb62a/xmlnote/68D27DB5293842F290FF80D5F413E586/28400" alt="1528738200306"></p> <p>接下来通过一段代码，来实现判断奇偶数的程序</p> <div class="language- extra-class"><pre class="language-text"><code>public class Demo2{
+    public static void main(String[] args){
+        int num = 10;
+        if(num % 2 == 0){
+            System.out.println(&quot;num是一个偶数&quot;);
+        }else{
+            System.out.println(&quot;num是一个奇数&quot;);
+        }
+    }
+}
+</code></pre></div></blockquote> <h5 id="if-else-if-else-语句"><a href="#if-else-if-else-语句" aria-hidden="true" class="header-anchor">#</a> if ... else if ... else 语句</h5> <blockquote><p>​	if…else if…else语句用于对多个条件进行判断，进行多种不同的处理。例如，对一个学生的考试成绩进行等级的划分，如果分数大于80分等级为优，否则，如果分数大于70分等级为良，否则，如果分数大于60分等级为中，否则，等级为差.</p> <p>​	if…else if…else语句具体语法格式:</p> <div class="language- extra-class"><pre class="language-text"><code>if(判断条件1){
+    执行语句1；
+}else if(判断条件2){
+    执行语句2；
+}
+......
+else if(判断语句n){
+    执行语句n;
+}else{
+    执行语句n+1;
+}
+</code></pre></div><p>​	上述格式中，判断条件是一个布尔值。当判断条件1为true时，if后面{}中的执行语句1会执行。当判断条件1为false时，会继续执行判断条件2，如果为true则执行语句2，以此类推，如果所有的判断条件都为false，则意味着所有条件均未满足，else后面{}中的执行语句n+1会执行</p> <p>​	if…else if…else语句的执行流程如下图所示 ：</p> <p><img src="https://note.youdao.com/yws/public/resource/905fe507d1dbcdd9d702e88e85feb62a/xmlnote/E69D0A5B57EE49F89D7214D6B21D625E/28402" alt="1529031563518"></p> <p>接下来通过一段代码，来实现对学生考试成绩进行等级划分</p> <div class="language- extra-class"><pre class="language-text"><code>public class Demo3{
+    public static void main(String[] args){
+        int score = 75;//定义学生分数
+        if(score &gt; 80){
+            System.out.println(&quot;优&quot;);
+        }else if(score &gt; 70){
+            System.out.println(&quot;良&quot;);
+        }else if(score &gt; 60){
+            System.out.println(&quot;刚刚好&quot;);
+        }else{
+            System.out.println(&quot;差&quot;);
+        }
+    }
+}
+</code></pre></div></blockquote> <h5 id="if的嵌套使用"><a href="#if的嵌套使用" aria-hidden="true" class="header-anchor">#</a> if的嵌套使用</h5> <blockquote><div class="language- extra-class"><pre class="language-text"><code>public class Demo4{
+    double height = 110;
+    double weight = 1110;
+    if(height &gt;= 110){
+        System.out.println(&quot;你很优秀&quot;);
+        if(weight &gt;= 1110){
+            System.out.println(&quot;陈独秀，请坐！&quot;);
+        }else{
+            System.out.println(&quot;你还是好好学java吧!&quot;);
+        }
+    }else{
+        System.out.println(&quot;你需要更加完美!&quot;);
+    }
+}
+</code></pre></div></blockquote> <h5 id="switch-case"><a href="#switch-case" aria-hidden="true" class="header-anchor">#</a> switch...case</h5> <blockquote><p>简述switch的格式及流程?</p> <div class="language- extra-class"><pre class="language-text"><code>表达式可以是: byte、short、int、char、String、枚举
+		jdk 1.0 : byte,short,int,char
+		jdk 1.5 : 枚举 enum
+		jdk 1.7 : 字符串 String
+switch (表达式) {
+	case 常量1 :
+		要执行代码;
+	break;
+	case 常量2 :
+		要执行代码;
+	break;
+		...
+	default :
+		要执行代码;
+	break;
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>switch (1) {
+	case 1 :
+		System.out.println(&quot;礼拜一上班&quot;);
+	break;
+	case 2 :
+		System.out.println(&quot;礼拜二出去游玩&quot;);
+	break;
+	case 3 :
+		System.out.println(&quot;礼拜三搬砖&quot;);
+	break;
+	default :
+		System.out.println(&quot;自嗨&quot;);
+	break;
+}
+</code></pre></div><p><strong>switch 在什么情况下终止</strong>:
+两种情况:
+遇到 break
+遇到 switch 的右大括号</p> <p><strong>注意:</strong>
+case 后面 只可以跟常量
+case 后面 的常量值是不允许重复出现
+default 可以省略,也可以出现在 switch 语句的任意位置
+default 里的代码,一定是在所有的 case 都不匹配的情况下才会去执行!!!</p> <p>练习：LOL段位</p></blockquote> <h4 id="循环语句"><a href="#循环语句" aria-hidden="true" class="header-anchor">#</a> 循环语句</h4> <p>​	什么是循环?</p> <p>​	例如:</p> <p>​	1.要做语文测试题了，班级里面有30个学生，老师要去打印30分卷子，这个时候打印机就循环执行了30次</p> <p>​	2.数学里面 10 / 3 = 3.33333 ， 3无限循环</p> <p>​	3.要求你们打印一千遍 &quot;我爱编程，编程是我快乐!&quot;</p> <p>​		System.out.println(&quot;我爱编程，编程是我快乐!&quot;);</p> <p>​		......</p> <p>​		这条打印语句要写上一千遍，是不是会感觉很痛苦？</p> <p>​	总结 : 当满足条件时，反复的执行某一段程序</p> <h5 id="while循环"><a href="#while循环" aria-hidden="true" class="header-anchor">#</a> while循环</h5> <blockquote><p>​	while循环语句和选择结构if语句有些相似，都是根据条件判断来决定是否执行大括号内的执行语句。区别在于，while语句会反复地进行条件判断，只要条件成立，{}内的执行语句就会执行，直到条件不成立，while循环结束</p> <p>​	while循环语句的语法结构如下 :</p> <div class="language- extra-class"><pre class="language-text"><code>while(循环条件){
+    执行语句；
+    ......
+}
+</code></pre></div><p>​	在上面的语法结构中，{}中的执行语句被称作循环体，循环体是否执行取决于循环条件。当循环条件为true时，循环体就会执行。循环体执行完毕时会继续判断循环条件，如条件仍为true则会继续执行，直到循环条件为false时，整个循环过程才会结束.</p> <p>​	while循环的执行流程如下图所示：</p> <p><img src="https://note.youdao.com/yws/public/resource/905fe507d1dbcdd9d702e88e85feb62a/xmlnote/F1E0DCD302454226A4F5821634C4DDC5/28404" alt="1528738333249"></p> <p>接下来通过一段代码来实现打印 1 ~ 10的自然数</p> <div class="language- extra-class"><pre class="language-text"><code>public class Demo5{
+    public static void main(String[] args){
+        int x = 1;//初始化变量x 赋值1
+        while(x &lt;= 10){//循环条件
+        	//满足条件时
+            System.out.println(&quot;x = &quot; + x);
+            x++;//x 进行自增
+        }
+    }
+}
+</code></pre></div><p>​	在上述代码中，x初始值为1，在满足循环条件x &lt;= 10的情况下，循环体会重复执行，打印x的值并让x进行自增。因此打印结果中x的值分别为1、2、3、4 ......。大家要注意的是，代码x++用于在每次循环时改变x的值，从而达到最终改变循环条件的目的。如果没有这行代码，整个循环会进入无限循环的状态，永远不会结束。</p></blockquote> <h5 id="for循环"><a href="#for循环" aria-hidden="true" class="header-anchor">#</a> for循环</h5> <blockquote><p>​	for循环语句是最常用的循环语句，一般用在循环次数已知的情况下。for循环语句的语法格式如下:</p> <div class="language- extra-class"><pre class="language-text"><code>for(初始化表达式;循环条件;操作表达式){
+    执行语句;
+    ......
+}
+</code></pre></div><p>​	在上面的语法结构中，for关键字后面()中包括了三部分内容：初始化表达式、循环条件和操作表达式，它们之间用“;”分隔，{}中的执行语句为循环体</p> <p>​	接下来分别用①表示初始化表达式、②表示循环条件、③表示操作表达式、④表示循环体，通过序号来具体分析for循环的执行流程。具体如下:</p> <div class="language- extra-class"><pre class="language-text"><code>for(1;2;4){
+    3
+}
+第一步，执行1
+第二步，执行2，如果判断结果为true，执行第三步，如果判断结果为false，执行第五步
+第三步，执行3
+第四步，执行4，然后重复执行2 - 3  - 4 - 2 - 3 - 4
+当 2 不满足时,退出循环
+</code></pre></div><p>​	接下来通过一个案例对自然数1~4进行求和，如下所示</p> <div class="language- extra-class"><pre class="language-text"><code>public class Demo6{
+    public static void main(String[] args){
+    	//定义一个sum变量求和
+        int sum = 0;
+        for(int i = 1;i &lt;= 4;i++){
+            sum += i;
+        }
+        System.out.println(&quot;sum = &quot; + sum);//10
+    }
+}
+</code></pre></div><p>​	上述代码中，变量i的初始值为1，在判断条件i&lt;=4为true的情况下，会执行循环体sum+=i，执行完毕后，会执行操作表达式i++，i的值变为2，然后继续进行条件判断，开始下一次循环，直到i=5时，条件i&lt;=4为false，结束循环，执行for循环后面的代码，打印“sum=10”</p> <p>​	为了让初学者能熟悉整个for循环的执行过程，现将上述代码运行期间每次循环中变量sum和i的值通过表</p> <p>罗列出来：</p> <table><thead><tr><th><strong>循环次数</strong></th> <th><strong>sum</strong></th> <th><strong>i</strong></th></tr></thead> <tbody><tr><td>第一次</td> <td>1</td> <td>1</td></tr> <tr><td>第二次</td> <td>3</td> <td>2</td></tr> <tr><td>第三次</td> <td>6</td> <td>3</td></tr> <tr><td>第四次</td> <td>10</td> <td>4</td></tr></tbody></table> <p>​	练习:</p> <p>​		1.求1加到 100的总和</p> <p>​		2.求1加到100的奇数和</p> <p>​		3.求1加到100的偶数和</p></blockquote> <h5 id="do-while循环"><a href="#do-while循环" aria-hidden="true" class="header-anchor">#</a> do...while循环</h5> <blockquote><p>do…while循环语句和while循环语句功能类似，其语法结构如下</p> <div class="language- extra-class"><pre class="language-text"><code>do{
+	执行语句;
+	......
+}while(循环条件);
+</code></pre></div><p>​	在上面的语法结构中，关键字do后面{}中的执行语句是循环体。do…while循环语句将循环条件放在了循环体的后面。这也就意味着，循环体会无条件执行一次，然后再根据循环条件来决定是否继续执行</p> <p>​	do…while循环的执行流程如下图所示</p> <p><img src="https://note.youdao.com/yws/public/resource/905fe507d1dbcdd9d702e88e85feb62a/xmlnote/B3CAF62949144B95803D2A0346D5C9B0/28407" alt="1528738420270"></p> <p>​	接下来使用do…while循环语句来实现打印1~4之间的自然数</p> <div class="language- extra-class"><pre class="language-text"><code>public class Demo7{
+	int x = 1;//初始化变量x,赋值为1
+    do{
+    	System.out.println(&quot;x = &quot; + x);
+	}while(x &lt;= 4);
+}
+</code></pre></div><p>​	总结 : do...while循环，先执行一次再去判断，无论如何都会执行一次</p> <p>​	练习: 猜数字游戏.</p></blockquote> <h5 id="无限循环"><a href="#无限循环" aria-hidden="true" class="header-anchor">#</a> 无限循环</h5> <blockquote><p>​	最简单无限循环格式 ：</p> <p>​		while(true){  }</p> <p>​		或</p> <p>​		for( ; ; ){ }</p> <p>​		或</p> <p>​		do{ }while(true);</p> <p>​	无限循环存在的原因是并不知道循环多少次，而是根据某些条件，来控制循环</p></blockquote> <h5 id="嵌套循环"><a href="#嵌套循环" aria-hidden="true" class="header-anchor">#</a> 嵌套循环</h5> <blockquote><p>​	嵌套循环是指在一个循环语句的循环体中再定义一个循环语句的语法结构。while、do…while、for循环语句都可以进行嵌套，并且它们之间也可以互相嵌套，如最常见的在for循环中嵌套for循环，格式如下：</p> <div class="language- extra-class"><pre class="language-text"><code>for( 初始化表达式; 循环条件; 操作表达式){
+    ......
+    for( 初始化表达式; 循环条件; 操作表达式){
+        ......
+    }
+    ......
+}
+</code></pre></div><p>​	接下来通过一个练习，来实现使用“*”打印直角三角形，如下所示</p> <div class="language- extra-class"><pre class="language-text"><code>public class Demo8{
+    public static void main(String[] args){
+        for( int i = 1; i &lt;= 4;i++ ){ //外层循环
+            for(int j = 1;j&lt;=i ;j++){ //内层循环
+                System.out.print(&quot;*&quot;);//打印不换行，println这个是打印换行
+            }
+            System.out.println();
+        }
+    }
+}
+</code></pre></div><p>​	结果如下图:</p> <p><img src="https://note.youdao.com/yws/public/resource/905fe507d1dbcdd9d702e88e85feb62a/xmlnote/E6CFDA41ACC3432EB04D419298F93F62/28409" alt="1528738535488"></p> <p>​	在上述代码中定义了两层for循环，分别为外层循环和内层循环，外层循环用于控制打印的行数，内层循环用于打印“ * ”,每一行  “ * ”个数逐行增加，最后输出一个直角三角形。由于嵌套循环程序比较复杂，下面分步骤进行详细地讲解，具体如下:</p> <p>​	第一步，在第3行代码定义了两个循环变量i和j，其中i为外层循环变量，j为内层循环变量</p> <p>​	第二步，在第4行代码将i初始化为1，条件i &lt;= 4为true，首次进入外层循环的循环体</p> <p>​	第三步，在第5行代码将j初始化为1，由于此时i的值为1，条件j &lt;= i为true，首次进入内层循环的循环体，打印一个“ * ”</p> <p>​	第四步，执行第5行代码中内层循环的操作表达式j++，将j的值自增为2</p> <p>​	第五步，执行第5行代码中的判断条件j&lt;=i，判断结果为false，内层循环结束</p> <p>​	第六步，执行第4行代码中外层循环的操作表达式i++，将i的值自增为2</p> <p>​	第七步，执行第4行代码中的判断条件i&lt;=4，判断结果为true，进入外层循环的循环体，继续执行内层循环</p> <p>​	第八步，由于i的值为2，内层循环会执行两次，即在第2行打印两个“*”。在内层循环结束时会打印换行符</p> <p>​	第九步，以此类推，在第3行会打印3个“*”，逐行递增，直到i的值为5时，外层循环的判断条件i &lt;= 4结果为false，外层循环结束，整个程序也就结束了</p></blockquote> <h5 id="跳转语句-break-continue"><a href="#跳转语句-break-continue" aria-hidden="true" class="header-anchor">#</a> 跳转语句(break,continue)</h5> <blockquote><p>​	跳转语句用于实现循环执行过程中程序流程的跳转，在Java中的跳转语句有break语句和continue语句。接下来分别进行详细地讲解</p> <p>​	break</p> <p>​	在switch条件语句和循环语句中都可以使用break语句。当它出现在switch条件语句中时，作用是终止某个case并跳出switch结构。当它出现在循环语句中，作用是跳出循环语句，执行后面的代码</p> <p>​	接下来通过下面一段代码，实现将当变量x的值为3时，使用break语句跳出循环，代码如下所示：</p> <div class="language- extra-class"><pre class="language-text"><code>public class Demo9 {
+	public static void main(String[] args) {
+		int x = 1; // 定义变量x，初始值为1
+		while (x &lt;= 4) { // 循环条件
+			System.out.println(&quot;x = &quot; + x); // 条件成立，打印x的值
+			if (x == 3) {
+				break;
+			}
+			x++; // x进行自增
+		}
+	}
+}
+</code></pre></div><p>​	标记:</p> <div class="language- extra-class"><pre class="language-text"><code>public class BreakDemo{
+	public static void main(String[] args) {
+		int i, j; // 定义两个循环变量
+		AAA: for (i = 1; i &lt;= 9; i++) { // 外层循环
+			for (j = 1; j &lt;= i; j++) { // 内层循环
+				if (i &gt; 4) { // 判断i的值是否大于4
+					break AAA; // 跳出外层循环
+				}
+				System.out.print(&quot;*&quot;); // 打印*
+			}
+			System.out.print(&quot;\n&quot;); // 换行
+		}
+	}
+}
+</code></pre></div><p>​	continue语句</p> <p>​	continue语句用在循环语句中，它的作用是终止本次循环，执行下一次循环</p> <div class="language- extra-class"><pre class="language-text"><code>public class ContinueDemo {
+	public static void main(String[] args) {
+		int sum = 0; // 定义变量sum，用于记住和
+		for (int i = 1; i &lt;= 100; i++) {
+			if (i % 2 == 0) { // i是一个偶数，不累加
+				continue; // 结束本次循环
+			}
+			sum += i; // 实现sum和i的累加
+		}
+		System.out.println(&quot;sum = &quot; + sum);
+	}
+}
+</code></pre></div></blockquote></div> <div class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">5/29/2019, 8:43:11 PM</span></div></div> <!----> </div> <!----></div></div>
+    <script src="/myblog/assets/js/app.0c6a3e6f.js" defer></script><script src="/myblog/assets/js/21.ac99894d.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Java的基本语法 | jimmy(六脉神剑)</title>
+    <meta name="description" content="种一棵树最好的时候是十年前">
+    
+    
+    <link rel="preload" href="/myblog/assets/css/0.styles.bb285c56.css" as="style"><link rel="preload" href="/myblog/assets/js/app.0c6a3e6f.js" as="script"><link rel="preload" href="/myblog/assets/js/20.8ac192ce.js" as="script"><link rel="prefetch" href="/myblog/assets/js/10.86e4b344.js"><link rel="prefetch" href="/myblog/assets/js/11.6bf75294.js"><link rel="prefetch" href="/myblog/assets/js/12.6a5fe9aa.js"><link rel="prefetch" href="/myblog/assets/js/13.c8027a8a.js"><link rel="prefetch" href="/myblog/assets/js/14.ba727d81.js"><link rel="prefetch" href="/myblog/assets/js/15.7aecfee7.js"><link rel="prefetch" href="/myblog/assets/js/16.f32dfcd4.js"><link rel="prefetch" href="/myblog/assets/js/17.f24bdcb9.js"><link rel="prefetch" href="/myblog/assets/js/18.8645cc73.js"><link rel="prefetch" href="/myblog/assets/js/19.e342a0be.js"><link rel="prefetch" href="/myblog/assets/js/2.03feb64a.js"><link rel="prefetch" href="/myblog/assets/js/21.ac99894d.js"><link rel="prefetch" href="/myblog/assets/js/22.caad605c.js"><link rel="prefetch" href="/myblog/assets/js/23.fbd832c0.js"><link rel="prefetch" href="/myblog/assets/js/24.dcdc9d21.js"><link rel="prefetch" href="/myblog/assets/js/25.b06028eb.js"><link rel="prefetch" href="/myblog/assets/js/26.524af8a3.js"><link rel="prefetch" href="/myblog/assets/js/27.81a7f7a3.js"><link rel="prefetch" href="/myblog/assets/js/28.41a9ff2e.js"><link rel="prefetch" href="/myblog/assets/js/29.2f542642.js"><link rel="prefetch" href="/myblog/assets/js/3.4ada0c35.js"><link rel="prefetch" href="/myblog/assets/js/30.f94836cf.js"><link rel="prefetch" href="/myblog/assets/js/31.81d5337f.js"><link rel="prefetch" href="/myblog/assets/js/32.3fea46b6.js"><link rel="prefetch" href="/myblog/assets/js/33.eb59c615.js"><link rel="prefetch" href="/myblog/assets/js/34.c7a75edb.js"><link rel="prefetch" href="/myblog/assets/js/35.5eb6855b.js"><link rel="prefetch" href="/myblog/assets/js/36.2e5cb9bf.js"><link rel="prefetch" href="/myblog/assets/js/37.69fe98f5.js"><link rel="prefetch" href="/myblog/assets/js/38.9795f763.js"><link rel="prefetch" href="/myblog/assets/js/39.d5dce79b.js"><link rel="prefetch" href="/myblog/assets/js/4.1750788b.js"><link rel="prefetch" href="/myblog/assets/js/40.2103c17a.js"><link rel="prefetch" href="/myblog/assets/js/41.f5ea1578.js"><link rel="prefetch" href="/myblog/assets/js/42.72e5e6ab.js"><link rel="prefetch" href="/myblog/assets/js/43.80f5b6c8.js"><link rel="prefetch" href="/myblog/assets/js/44.055648bd.js"><link rel="prefetch" href="/myblog/assets/js/45.a3a6bde8.js"><link rel="prefetch" href="/myblog/assets/js/46.6dc3a768.js"><link rel="prefetch" href="/myblog/assets/js/47.26b73fda.js"><link rel="prefetch" href="/myblog/assets/js/48.566985e8.js"><link rel="prefetch" href="/myblog/assets/js/49.4e35fbc0.js"><link rel="prefetch" href="/myblog/assets/js/5.8bab9c37.js"><link rel="prefetch" href="/myblog/assets/js/50.7586c5df.js"><link rel="prefetch" href="/myblog/assets/js/51.ba057a22.js"><link rel="prefetch" href="/myblog/assets/js/52.538dfc53.js"><link rel="prefetch" href="/myblog/assets/js/53.0b9901c3.js"><link rel="prefetch" href="/myblog/assets/js/54.4b08cec5.js"><link rel="prefetch" href="/myblog/assets/js/55.15dfc3a4.js"><link rel="prefetch" href="/myblog/assets/js/56.18d2a3c1.js"><link rel="prefetch" href="/myblog/assets/js/57.38814818.js"><link rel="prefetch" href="/myblog/assets/js/6.e81ea5f3.js"><link rel="prefetch" href="/myblog/assets/js/7.f4baaa53.js"><link rel="prefetch" href="/myblog/assets/js/8.609aaec0.js"><link rel="prefetch" href="/myblog/assets/js/9.bf8da6ba.js">
+    <link rel="stylesheet" href="/myblog/assets/css/0.styles.bb285c56.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/myblog/" class="home-link router-link-active"><!----> <span class="site-name">jimmy(六脉神剑)</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/myblog/Java/" class="nav-link router-link-active">Java</a></div><div class="nav-item"><a href="/myblog/H5/" class="nav-link">前端</a></div><div class="nav-item"><a href="/myblog/go/" class="nav-link">Go</a></div><div class="nav-item"><a href="/myblog/BigData/" class="nav-link">大数据</a></div><div class="nav-item"><a href="/myblog/Thought/" class="nav-link">随笔</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">其他学习文档</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="http://www.wangbin.shop:8080" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  王斌学习博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://wangchujiang.com/linux-command/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Linux命令学习
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://blog.didispace.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  DD博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.hollischuang.com/archives/3280" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Java成神之路
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">在线工具</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://smallpdf.com/cn/pdf-to-word" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  PDF转换器
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.json.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  JSON编辑器
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://tableconvert.com/?output=text&amp;data=id%2C%20name%2C%20age%2C%20gender%0A1%2C%20Lawrence%2C%2039%2C%20M%0A2%2C%20Oliver%2C%2025%2C%20M%0A3%2C%20Roberta%2C%2017%2C%20F%0A4%2C%20Bamboo%2C%2070%2C%20F%0A" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  MD表格生成
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://cron.qqe2.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  CRON表达式
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://tool.oschina.net/codeformat/html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  代码格式化
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.toyaml.com/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  YAML-&gt;properties
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <a href="https://github.com/bin392328206/myblog.git" target="_blank" rel="noopener noreferrer" class="repo-link">
+    My GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/myblog/Java/" class="nav-link router-link-active">Java</a></div><div class="nav-item"><a href="/myblog/H5/" class="nav-link">前端</a></div><div class="nav-item"><a href="/myblog/go/" class="nav-link">Go</a></div><div class="nav-item"><a href="/myblog/BigData/" class="nav-link">大数据</a></div><div class="nav-item"><a href="/myblog/Thought/" class="nav-link">随笔</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">其他学习文档</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="http://www.wangbin.shop:8080" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  王斌学习博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://wangchujiang.com/linux-command/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Linux命令学习
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://blog.didispace.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  DD博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.hollischuang.com/archives/3280" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Java成神之路
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">在线工具</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://smallpdf.com/cn/pdf-to-word" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  PDF转换器
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.json.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  JSON编辑器
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://tableconvert.com/?output=text&amp;data=id%2C%20name%2C%20age%2C%20gender%0A1%2C%20Lawrence%2C%2039%2C%20M%0A2%2C%20Oliver%2C%2025%2C%20M%0A3%2C%20Roberta%2C%2017%2C%20F%0A4%2C%20Bamboo%2C%2070%2C%20F%0A" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  MD表格生成
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://cron.qqe2.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  CRON表达式
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://tool.oschina.net/codeformat/html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  代码格式化
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.toyaml.com/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  YAML-&gt;properties
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <a href="https://github.com/bin392328206/myblog.git" target="_blank" rel="noopener noreferrer" class="repo-link">
+    My GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first collapsable"><p class="sidebar-heading open"><span>Java基础</span> <span class="arrow down"></span></p> <ul class="sidebar-group-items"><li><a href="/myblog/Java/JavaBase/JavaFist.html" class="active sidebar-link">了解Java</a></li><li><a href="/myblog/Java/JavaBase/Java流程控制语句.html" class="sidebar-link">流程控制语句</a></li><li><a href="/myblog/Java/JavaBase/数组.html" class="sidebar-link">数组</a></li><li><a href="/myblog/Java/JavaBase/二维数组与方法.html" class="sidebar-link">二维数组与方法</a></li><li><a href="/myblog/Java/JavaBase/IO流1.html" class="sidebar-link">IO流1</a></li><li><a href="/myblog/Java/JavaBase/IO流2.html" class="sidebar-link">IO流2</a></li><li><a href="/myblog/Java/JavaBase/IO流3.html" class="sidebar-link">IO流3</a></li><li><a href="/myblog/Java/JavaBase/JsonAndXML.html" class="sidebar-link">JsonAndXML</a></li><li><a href="/myblog/Java/JavaBase/异常.html" class="sidebar-link">异常</a></li><li><a href="/myblog/Java/JavaBase/网络基础.html" class="sidebar-link">网络基础</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>JavaWep</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>Java框架</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>分布式</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>数据库</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>中间件</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>Linux 和 容器</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>服务网格</span> <span class="arrow right"></span></p> <!----></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="java的基本语法"><a href="#java的基本语法" aria-hidden="true" class="header-anchor">#</a> Java的基本语法</h1> <h4 id="java注释"><a href="#java注释" aria-hidden="true" class="header-anchor">#</a> Java注释</h4> <blockquote><p>​	java中有三种注释</p> <p>​		*单行注释： //注释内容</p> <p>​		*<em>多行注释：/</em> * 注释内容 */</p> <p>​		<em>文档注释： /</em>*  注释内容 */</p> <p>​		其中文档注释可以利用javadoc.exe生成API文档</p> <div class="language- extra-class"><pre class="language-text"><code>/*
+ * 实现步骤：
+ * 1.定义一个类 class
+ * 2.编写程序执行的入口方法，main主方法
+ * 3.通过输出语句System.out.println()将信息”HelloWorld!”打印在控制台上
+ */
+// 定义一个类 class
+class HelloWorld {
+	// 编写程序执行的入口方法，main主方法
+	public static void main(String[] args) {
+		// 通过Java提供的输出语句, 将信息”HelloWorld!”打印在控制台上
+		System.out.println(&quot;HelloWorld!&quot;);
+	}
+}
+</code></pre></div><p>其实注释就是做记录解释代码，建议大家今后在编码时先写思路、分析、步骤、然后再写代码。把思路、分析、步骤使用注释放在源码中。</p></blockquote> <h4 id="java关键字"><a href="#java关键字" aria-hidden="true" class="header-anchor">#</a> Java关键字</h4> <blockquote><p>​	关键字是被java语言赋予了特殊含义，具有专门用途的单词。比如 public、class、static 等这些都是设定好的。</p> <p><img src="https://note.youdao.com/yws/public/resource/5544e72fb107d3a329595a17c90322bd/xmlnote/C56A91E69EBE4C28915E8E38FAA8C559/28371" alt="1528737738563"></p> <p>​	这些关键字需要背诵吗？</p> <p>​	我们HelloWorld.java案例中用到过哪些关键字？</p></blockquote> <h4 id="标识符"><a href="#标识符" aria-hidden="true" class="header-anchor">#</a> 标识符</h4> <blockquote><p>​	标识符就是名称的意思，所有的名称都统称为标识符。java中经常要定义类、方法、变量(后面会学习到)，在定义它们时总要给他们取名字，这些名字就是标识符。</p> <p>​	标识符组成元素：</p> <p>​		*英文：a-zA-Z</p> <p>​		*数字:  0-9</p> <p>​		*符号:  _ 与 $</p> <p>​	标识符规则:</p> <p>​		*不能以数字开头</p> <p>​		*不可以使用关键字</p> <p>​		*遵循驼峰法则，比如 HelloWorld</p> <p>​		*尽量达到见名知意</p></blockquote> <h4 id="数据"><a href="#数据" aria-hidden="true" class="header-anchor">#</a> 数据</h4> <h5 id="程序概述"><a href="#程序概述" aria-hidden="true" class="header-anchor">#</a> 程序概述</h5> <blockquote><p><strong>软件是什么?</strong></p> <p>​		其实软件就是用来处理数据的。</p> <p>​		软件的组成:</p> <p>​			*数据</p> <p>​			*处理数据的逻辑</p> <p>​			程序 = 数据 + 逻辑</p> <p><strong>什么是数据？</strong></p> <p>​		用电商来举例子，用户是数据，商品也是数据。</p> <p><strong>处理数据的逻辑又是什么呢？</strong></p> <p>​		购买商品的过程就是处理数据的逻辑</p> <p>​	程序的开发离不开数据，说白了程序就是处理数据的。通常数据会发生变化，而处理数据的逻辑不会发生改变。例如商品的数量、种类是会变化的，而买的流程是不会改变的。</p></blockquote> <h4 id="数据类型"><a href="#数据类型" aria-hidden="true" class="header-anchor">#</a> 数据类型</h4> <blockquote><p>​	生活中的数据也是有类型的，例如 人名：汉字或者英文，年龄：数字</p> <p>​	那么java中有哪些数据类型？他们分别是怎么表示的？</p> <p>​	java是强类型语言，对每一种数据都对应了明确的数据类型。下面是java中的数据类型</p> <p><img src="https://note.youdao.com/yws/public/resource/5544e72fb107d3a329595a17c90322bd/xmlnote/75D5AF5DCC4B47A89A47B93407041B2C/28374" alt="1528737803606"></p> <p>​	基本数据类型是java语言中内置的类型，分别是 整数类型、小数类型、字符类型、布尔类型。这四类基本类型是最简单、最基础的类型。</p> <p>​	引用数据类型是强大的数据类型，它是基于基本数据类型创建的。JavaSE中提供了一个超级类库，类库中包含了近万种引用数据类型。不过现在我们先要学习的是基本类型！</p></blockquote> <h4 id="常量"><a href="#常量" aria-hidden="true" class="header-anchor">#</a> 常量</h4> <blockquote><p>​	Java中的数据量分为常量和变量，我们先来学习常量！</p> <p>​	常量就是不变的数据量，例如666就是常量。任何数据量都有其类型，那么这个666又是什么类型呢？没错，就是整数类型!!!</p> <p>​		*整数类型: 18 、666 、1888等</p> <p>​		*小数类型: 1.8 、6.66、3.1415926等</p> <p>​		*字符类型: 'a' 、'A'、'0' 、‘中’等。（注意: 字符型是用 ' ' 包裹，并且里面只能写一个）</p> <p>​		*布尔类型: true(真)、false(假)</p> <p>​		*字符串类型: “我爱java”、“HelloWorld!!!”、“我爱编程，编程使我快乐!”</p> <p>​			◾字符串String 是一种应用类型，我们先了解作为常量的使用方式</p> <p>​			◾字符串必须用 &quot; &quot; 包裹，里面可以随意写东西</p> <p>​	回顾我们HelloWorld案例，其中System.out.println(&quot;HelloWorld!!!&quot;)的圆括号里面是什么类型?</p> <p>​	下面我们通过代码实际感受一下:</p> <div class="language- extra-class"><pre class="language-text"><code>/*
+*	常量的演示
+*/
+public class Demo{
+    public static void main(String[] args){
+        // 整数类型
+        System.out.println(666);
+        System.out.println(1888);
+        // 小数类型
+        System.out.println(1.8);
+        System.out.println(3.1415926);
+        // 布尔类型
+        System.out.prinltn(true);//真
+        System.out.println(false);//假
+        //字符类型
+        System.out.println('A');
+        System.out.println('中');
+        //字符串类型
+        System.out.println(&quot;我爱编程&quot;);
+        System.out.println(&quot;编程是我快乐&quot;);
+    }
+}
+</code></pre></div></blockquote> <h4 id="变量"><a href="#变量" aria-hidden="true" class="header-anchor">#</a> 变量</h4> <h5 id="变量的概述"><a href="#变量的概述" aria-hidden="true" class="header-anchor">#</a> 变量的概述</h5> <blockquote><p>​	前面我们已经学过了常量，现在来学习下变量。在java中变量的应用比常量应用要多很多，所以变量是非常重要的知识点!</p> <p>​	什么是变量?</p> <h5 id="变量是一个内存中的小容器-什么是容器？例如-水杯是容器，用来装水-衣柜是容器，用来装衣服。那么变量是装什么的呢？答案是数据-结论-变量是内存中装数据的小容器，你只能用它来存数据和取数据。"><a href="#变量是一个内存中的小容器-什么是容器？例如-水杯是容器，用来装水-衣柜是容器，用来装衣服。那么变量是装什么的呢？答案是数据-结论-变量是内存中装数据的小容器，你只能用它来存数据和取数据。" aria-hidden="true" class="header-anchor">#</a> 变量是一个内存中的小容器,什么是容器？例如 : 水杯是容器，用来装水;衣柜是容器，用来装衣服。那么变量是装什么的呢？答案是数据! 结论:变量是内存中装数据的小容器，你只能用它来存数据和取数据。</h5></blockquote> <h5 id="计算机的储存单元"><a href="#计算机的储存单元" aria-hidden="true" class="header-anchor">#</a> 计算机的储存单元</h5> <blockquote><p>​	变量是内存中的小容器，用来存储数据。那么计算机内存是怎么存储数据的呢？无论是内存还是硬盘，计算机的存储设备<strong>最小信息单元</strong>叫&quot;位(bit)&quot;,我们又称之为”比特位“，通常用小写字母b表示。而计算机<strong>最小的存储单元</strong>叫&quot;字节(byte)&quot;,通常用大写字母B表示，1个字节由8个位组成。</p> <p>​	操作系统分派的最小存储空间是1个字节，而不是1位。</p> <p>​	计算机除了字节与位外还有哪些存储单位，大家一起来看看!</p> <p>​		1B(字节) = 8 bit</p> <p>​		1KB = 1024B</p> <p>​		1MB = 1024KB</p> <p>​		1GB = 1024MB</p> <p>​		1TB  = 1024GB</p> <p>​		1PB = 1024TB</p> <p><img src="https://note.youdao.com/yws/public/resource/5544e72fb107d3a329595a17c90322bd/xmlnote/B22FF92C20784DB2BC560E9850B390B1/28377" alt="1528737877297"></p></blockquote> <h4 id="基本类型之4类8种"><a href="#基本类型之4类8种" aria-hidden="true" class="header-anchor">#</a> 基本类型之4类8种</h4> <blockquote><p>​	衣柜不能用来装水，水杯也不能用来装衣服。这说明不同的容器装不同的物品。变量也是如此，在创建变量时需要指定变量的数据类型，例如 整型变量、浮点型变量等。</p> <p>​	结论:变量必须要有明确的类型，什么类型的变量装什么类型的数据</p> <p>​	水杯是用来装水的，那么装多少水呢？一吨？我们知道水杯在创建时不只确定了要装的是水(数据类型)，而且还能确定装多少水(数据类型的具体种类)。变量也是如此，需要指定变量能装什么类型的数据，同时也要确定能装多大的数据</p> <p>​	java的基本类型一共4类，把这四类展开以后就是8种基本数据类型，我们今后写程序时用的是这8种基本类型，这8种基本类型也指定了范围。</p></blockquote> <p><img src="https://note.youdao.com/yws/public/resource/5544e72fb107d3a329595a17c90322bd/xmlnote/5C9FE2CFC4E24F949B281946AC65A93D/28806" alt="image"></p> <blockquote><p><strong>char 字符型 ，2个字节 ，用单引号表示 ' ' ,刚好容纳一个汉字，注意：里面只能放一个</strong></p> <p><strong>boolean 布尔型 ，一个字节 0000 0001 最低为表示，取值(布尔值) ：true(真) 和 false(假)</strong></p> <p>​	E :  123E5 = 123 * 10^5 = 12300000 , 123E-5 = 123 * 10^-5 = 0.0123</p> <p>​	e :  自然常数，约 2.718281828</p></blockquote> <h4 id="常量与类型"><a href="#常量与类型" aria-hidden="true" class="header-anchor">#</a> 常量与类型</h4> <blockquote><p>​	我们前面说666是整数常量，但它是byte、short、int、long里面的哪一种呢？下面我们就来聊聊这一常量类型的问题。</p> <p>​	◾<strong>在Java中默认的整数类型是int类型</strong></p> <p>​		例如: 666 、 888</p> <p>​	◾<strong>在Java中如果是long类型的值后面需要加L(大小写都可以，建议大写)</strong></p> <p>​		例如: 13456789123L 、100L</p> <p>​	◾<strong>在Java中小数默认是double类型</strong></p> <p>​		例如： 1.888、3.123456</p> <p>​	◾<strong>在Java中如果是float类型的值后面需要加上F(大小写都可以建议大写)</strong></p> <p>​		例如: 1.5F、6.8888F</p></blockquote> <h4 id="定义变量-创建变量"><a href="#定义变量-创建变量" aria-hidden="true" class="header-anchor">#</a> 定义变量(创建变量)</h4> <blockquote><p>​	定义变量的语法:</p> <p>​		数据类型   变量名  =  数据值;</p> <p>​		int  a  = 100;(用分号结束)</p> <p>​		解释int a = 100; 把值为100的整数赋值给变量a，其中100在int类型的取值范围以内。</p> <p>​		练习:要求:写出代码运行起来，并且能够解释每行代码的意思。</p></blockquote> <blockquote><div class="language- extra-class"><pre class="language-text"><code>public class Variable{
+    public static void main(String[] args){
+        int a = 100;
+        System.out.println(a);
+        double b = 7.89;
+        System.out.println(b);
+        char c = '猿';
+        System.out.println(c);
+        String d = &quot;今天,又是充满希望的一天!&quot;;
+		System.out.println(d);
+		boolean e = true;
+		System.out.println(e);
+    }
+}	
+</code></pre></div></blockquote> <blockquote><p>​	变量使用的注意事项:</p> <p>​	局部变量</p> <p>​	1.我们使用变量的时候要注意，要满足变量的使用规则我们才能使用</p> <p>​	2.定义变量时可以先不赋值，使用时在赋值。不赋值不能使用</p> <div class="language- extra-class"><pre class="language-text"><code>public class Demo2{
+    public static void main(String[] args){
+    	int x;//先定义一个变量x
+    	x = 20;//把20赋值给这个x
+    	System.out.println(x);//这一步是打印x，这也就是在这一行用到了x
+	}
+}	
+</code></pre></div><p>​	3.变量不可重复定义</p> <div class="language- extra-class"><pre class="language-text"><code>public class Demo3{
+    public static void main(String[] args){
+        int i = 10;
+        double i = 1.5;// 这里 i 就重复了，会发生编译错误  
+    }
+}
+</code></pre></div></blockquote> <h4 id="数据类型转换"><a href="#数据类型转换" aria-hidden="true" class="header-anchor">#</a> 数据类型转换</h4> <blockquote><p>类型根据字节数由小到大排列：byte - short - int - float - long - double</p> <p>两种转换方式:</p> <p>​	1.显示转换(强制转换)</p> <p>​		小范围数据类型  变量 =  大范围数据类型;</p> <p>​		如:</p> <p>​		int n = (int)6.7;</p> <p>​		或者</p> <p>​		double l = 3.14;</p> <p>​		int t = (int)l;</p> <p>​		强制转换注意: 需要在值的前面加上对应的数据类型</p> <p>​	2.隐式转换(自动转换)</p> <p>​		大范围数据类型  变量  =  小范围的数据类型;</p> <p>​		如:</p> <p>​		double d = 10000;</p> <p>​		或者</p> <p>​		int i = 100;</p> <p>​		double d2 = i;</p></blockquote> <h4 id="运算符"><a href="#运算符" aria-hidden="true" class="header-anchor">#</a> 运算符</h4> <h5 id="算术运算符"><a href="#算术运算符" aria-hidden="true" class="header-anchor">#</a> 算术运算符</h5> <table><thead><tr><th><strong>运算符</strong></th> <th><strong>运算规则</strong></th> <th><strong>范例</strong></th> <th><strong>结果</strong></th></tr></thead> <tbody><tr><td>+</td> <td>正号</td> <td>+3</td> <td>3</td></tr> <tr><td>+</td> <td>加</td> <td>2+3</td> <td>5</td></tr> <tr><td>+</td> <td>连接字符串</td> <td>“中”+“国”</td> <td>“中国”</td></tr> <tr><td>-</td> <td>负号</td> <td>int   a=3;-a</td> <td>-3</td></tr> <tr><td>-</td> <td>减</td> <td>3-1</td> <td>2</td></tr> <tr><td>*</td> <td>乘</td> <td>2*3</td> <td>6</td></tr> <tr><td>/</td> <td>除</td> <td>5/2</td> <td>2</td></tr> <tr><td>%</td> <td>取模</td> <td>5/2</td> <td>1</td></tr> <tr><td>++</td> <td>自增</td> <td>int   a=1;a++/++a</td> <td>2</td></tr> <tr><td>--</td> <td>自减</td> <td>int   b=3;a--/--a</td> <td>2</td></tr></tbody></table> <blockquote><p>​	使用算术运算符时要注意:</p> <p>​	    1.加法运算符在连接字符串时要注意，只有直接与字符串相加才会转成字符串</p> <div class="language- extra-class"><pre class="language-text"><code>public class Demo4{
+    public static void main(String[] args){
+        System.out.println(&quot;中&quot; + &quot;国&quot;);//打印出 中国
+    }
+}
+</code></pre></div><p>​	    2.除法“/”当两边为整数时，取整数部分，舍余数。当其中一边为浮点型时，按正常规则相除</p> <div class="language- extra-class"><pre class="language-text"><code>System.out.println(3/2);// 1
+System.out.println(3.0/2);//1.5
+</code></pre></div><p>​            3.“%”取模(取余数)，小数取余没有意义。结果符号与被取余符号相同</p> <div class="language- extra-class"><pre class="language-text"><code>System.out.println(5%3);// 5 / 3 = 1 ... 2 所以结果时 2
+System.out.println(3%5);// 一个小的数对一个大的数取模，就等于它本身 3
+</code></pre></div><h5 id="算术运算符-的使用"><a href="#算术运算符-的使用" aria-hidden="true" class="header-anchor">#</a> <strong>算术运算符 ++ , --的使用</strong></h5> <p>我们来看一段代码</p> <div class="language- extra-class"><pre class="language-text"><code>int a = 3;
+int b = 3;
+a++;
+b--;
+System.out.println(a);//4
+System.out.println(b);//3
+</code></pre></div><p>​	上面的代码输出结果a的值为4，b的值为2</p> <p>​	这说明a与b的值在原有的基础上发生了改变，改变的值为1.</p> <p>​	++运算符：会在原有值得基础上自增1</p> <p>​	--运算符：会在原有值得基础上自减1</p> <p>我们再来看一段代码</p> <div class="language- extra-class"><pre class="language-text"><code>int a = 3;
+int b = 3;
+++a;
+--b;
+System.out.println(a);//4
+System.out.println(b);//3
+</code></pre></div><p>​	上面的代码输出结果a的值为4，b的值为2</p> <p>​	说明 ++,-- 在单独使用并且不参与操作符时，不管在前还是在后结果是一样的。</p> <p>接下来我们参与操作符</p> <div class="language- extra-class"><pre class="language-text"><code>int a = 3;
+int b;
+b = a++ + 10;
+System.out.println(a);//4
+System.out.println(b);//13
+</code></pre></div><p>​	上面代码的输出结果a值为4，b值为13;</p> <p>​	强调:当++,--运算符后置时，先使用变量a原有值参与运算操作，运算操作完成后，变量a的值自增1或者自减1</p> <p>再介绍下++，--运算符前置时，参与运算操作的变化，我们来看一段代码 ：</p> <div class="language- extra-class"><pre class="language-text"><code>int a = 3;
+int b;
+b = ++a + 10;
+System.out.println(a);//4
+System.out.println(b);//14
+
+</code></pre></div><p>​	强调: ++，--运算符前置时，先将变量a的值自增1或者自减1，然后使用更新后的新值参与运算操作</p></blockquote> <h5 id="赋值运算符"><a href="#赋值运算符" aria-hidden="true" class="header-anchor">#</a> 赋值运算符</h5> <blockquote><p>我们来学习一下赋值运算符，赋值运算符就是为变量赋值的符号，赋值运算符的使用看下图：</p> <table><thead><tr><th><strong>运算符</strong></th> <th><strong>运算规则</strong></th> <th><strong>范例</strong></th> <th><strong>结果</strong></th></tr></thead> <tbody><tr><td>=</td> <td>赋值</td> <td>int a=2</td> <td>2</td></tr> <tr><td>+=</td> <td>加后赋值</td> <td>int a=2，a+=2</td> <td>4</td></tr> <tr><td>-=</td> <td>减后赋值</td> <td>int a=2，a-=2</td> <td>0</td></tr> <tr><td>*=</td> <td>乘后赋值</td> <td>int a=2，a*=2</td> <td>4</td></tr> <tr><td>/=</td> <td>整除后赋值</td> <td>int a=2，a/=2</td> <td>1</td></tr> <tr><td>%=</td> <td>取模后赋值</td> <td>int a=2，a%=2</td> <td>0</td></tr></tbody></table> <p><strong>注意</strong>：诸如+=这样形式的赋值运算符，会将结果自动强转成等号左边的数据类型。</p> <p>写一个代码，我们看一下赋值运算符的使用</p> <div class="language- extra-class"><pre class="language-text"><code>/*
+ * 赋值运算符
+ * +=, -=, *=, /=, %= ： 
+ * 上面的运算符作用：将等号左右两边计算，会将结果自动强转成等号左边的数据类型,再赋值给等号左边的
+ * 注意：赋值运算符左边必须是变量
+ */
+public class Demo5{
+	public static void main(String[] args) {
+		byte x = 10;
+		x += 20;// 相当于 x = (byte)(x+20);
+		System.out.println(x);// 30
+	}
+}
+</code></pre></div></blockquote> <h5 id="比较运算符"><a href="#比较运算符" aria-hidden="true" class="header-anchor">#</a> 比较运算符</h5> <blockquote><p>比较运算符，又叫关系运算符，它是用来判断两个操作数的大小关系及是否相等关系的，结果是布尔值true或者false 。</p> <table><thead><tr><th><strong>运算符</strong></th> <th><strong>运算规则</strong></th> <th><strong>范例</strong></th> <th><strong>结果</strong></th></tr></thead> <tbody><tr><td>==</td> <td>相等于</td> <td>4==3</td> <td>False</td></tr> <tr><td>!=</td> <td>不等于</td> <td>4!=3</td> <td>True</td></tr> <tr><td>&lt;</td> <td>小于</td> <td>4&lt;3</td> <td>False</td></tr> <tr><td>&gt;</td> <td>大于</td> <td>4&gt;3</td> <td>True</td></tr> <tr><td>&lt;=</td> <td>小于等于</td> <td>4&lt;=3</td> <td>False</td></tr> <tr><td>&gt;=</td> <td>大于等于</td> <td>4&gt;=3</td> <td>True</td></tr></tbody></table> <p>这里需要注意一下：</p> <p>​	*赋值运算符的 = 符号与比较运算符的 == 符号是有区别的，如下：</p> <p>​		 1.赋值运算符的 = 符号，是用来将 = 符号右边的值，赋值给 = 符号左边的变量；</p> <p>​		 2.比较运算符的 == 符号，是用来判断== 符号左右变量的值是否相等的</p> <p>我们通过下面的一段代码，我们演示一下这个注意事项 ：</p> <div class="language- extra-class"><pre class="language-text"><code>int a = 3;
+int b = 4;
+System.out.println( a=b );// 4
+System.out.println( a==b );// true
+</code></pre></div></blockquote> <h5 id="逻辑运算符"><a href="#逻辑运算符" aria-hidden="true" class="header-anchor">#</a> 逻辑运算符</h5> <blockquote><p>逻辑运算符，它是用于布尔值进行运算的，运算的最终结果为布尔值true或false</p> <table><thead><tr><th><strong>运算符</strong></th> <th><strong>运算规则</strong></th> <th><strong>范例</strong></th> <th><strong>结果</strong></th></tr></thead> <tbody><tr><td>&amp;</td> <td>与</td> <td>false&amp;true</td> <td>False</td></tr> <tr><td>|</td> <td>或</td> <td>false|true</td> <td>True</td></tr> <tr><td>^</td> <td>异或</td> <td>true^flase</td> <td>True</td></tr> <tr><td>!</td> <td>非</td> <td>!true</td> <td>Flase</td></tr> <tr><td>&amp;&amp;</td> <td>短路与</td> <td>false&amp;&amp;true</td> <td>False</td></tr> <tr><td>||</td> <td>短路或</td> <td>false||true</td> <td>True</td></tr></tbody></table> <p>看完图后，我们来看一下逻辑运算符的常规使用方式：</p> <p>​	1.逻辑运算符通常连接两个其他表达式计算后的布尔值结果</p> <p>​	2.当使用短路与或者短路或时，只要能判断出结果则后边的部分就不再判断</p> <p>我们通过代码演示一下：</p> <div class="language- extra-class"><pre class="language-text"><code>boolean b = 100&gt;10;
+boolean b2 = false;
+System.out.println(b&amp;&amp;b2); // 打印结果为 false
+System.out.println(b||b2); //打印结果为 true
+System.out.println(!b2); //打印结果为 true
+System.out.println(b &amp;&amp; 100&gt;10); //打印结果为 true,本行结果的计算方式稍后讲解运算符优先级时解答
+</code></pre></div><p>好了，我们来总结一下运算符的结果规律吧 :</p> <p>​	1.短路与&amp;&amp;:参与运算的两边数据，有false，则运算结果为false</p> <p>​	2.短路或||:参与运算的两边数据，有true，则运算结果为true</p> <p>​	3.逻辑非! : 参与运算的数据，原先是true则变成false，原先是false则变成true</p></blockquote> <h5 id="进制转换"><a href="#进制转换" aria-hidden="true" class="header-anchor">#</a> 进制转换</h5> <blockquote><p>​	*二进制</p> <p>​	八进制</p> <p>​	十六进制</p></blockquote> <h5 id="位运算"><a href="#位运算" aria-hidden="true" class="header-anchor">#</a> 位运算</h5> <blockquote><p>左移 ： &lt;&lt;</p> <div class="language- extra-class"><pre class="language-text"><code>int a = 4 &lt;&lt; 2; // 4 * 2^2 = 16
+int b = 8 &lt;&lt; 3; // 8 * 2^3 = 64
+// 总结: int x  = y &lt;&lt; z 时相当于 y * 2^z
+</code></pre></div><p>右移： &gt;&gt;</p> <div class="language- extra-class"><pre class="language-text"><code>int a = 4 &gt;&gt; 2; // 4 / 2^2 = 1;
+int b = 8 &gt;&gt; 3; // 8 / 2^3 = 1;
+// 总结 : int x = y &gt;&gt; z 时相当于 y / 2^z
+</code></pre></div><p>无符号运算 &gt;&gt;&gt;</p> <div class="language- extra-class"><pre class="language-text"><code>int a = 4;
+System.out.println(a &gt;&gt;&gt; 2); // 1
+int b = -4;
+System.out.println(b &gt;&gt;&gt; 2); // 1073741823
+源码 
+1000 0000 0000 0000 0000 0000 0000 0100
+反码(高位不变低位相反)
+1111 1111 1111 1111 1111 1111 1111 1011
+补码 (反码 + 1)
+1111 1111 1111 1111 1111 1111 1111 1100
+右移两位
+0011 1111 1111 1111 1111 1111 1111 1111
+直接计算移动后的值
+2 ^ 29 + 2^28 + 2^27 + ...+ 2^0 
+</code></pre></div></blockquote> <hr> <h5 id="三元运算符-三目运算"><a href="#三元运算符-三目运算" aria-hidden="true" class="header-anchor">#</a> 三元运算符(三目运算)</h5> <blockquote><p>​	接下来我们要学习的三元运算符与之前的运算符不同。之前学习的均为一元或者二元运算符。元即参与运算的数据</p> <p>​	格式：</p> <p>​		数据类型 变量名 = (条件表达式)？表达式1：表达式2;</p> <p>​	表达式：通俗的说，即通过使用运算符将操作数联系起来的式子，例如 ：</p> <p>​		1.3+2，使用算数运算符将操作数联系起来，这种情况，我们称为算数表达式</p> <p>​		2.3&gt;2，使用比较运算符（也称为条件运算符）将操作数联系起来，这种情况，我们称为条件表达式</p> <p>​	三元运算符运算规则：</p> <p>​		先判断条件表达式的值，若为true，运算结果为表达式1；若为false，运算结果为表达式2</p> <p>通过代码演示，我们来学习下三元运算符的使用 ：</p> <div class="language- extra-class"><pre class="language-text"><code>方式一：
+	System.out.println( 3&gt;2 ? “正确” : “错误” ); 
+// 三元运算符运算后的结果为true，运算结果为表达式1的值“正确”，然后将结果“正确”，在控制台输出打印
+
+方式二：
+	int a = 3;
+	int b = 4;
+	String result = (a==b) ? “相等” : “不相等”;  
+	System.out.println(result);
+//三元运算符运算后的结果为false，运算结果为表达式2的值“不相等”，然后将结果赋值给了变量result
+
+方式三：
+	int n = (3&gt;2 &amp;&amp; 4&gt;6) ? 100 : 200;
+	System.out.println(n);
+	//三元运算符运算后的结果为false，运算结果为表达式2的值200,然后将结果200赋值给了变量n
+</code></pre></div><p>小练习:</p> <p>打印：控制台显示如下图片<img src="https://note.youdao.com/yws/public/resource/5544e72fb107d3a329595a17c90322bd/xmlnote/7286E2144B9C4B96A0E2AD1053854E24/28383" alt="1528738061300"></p></blockquote></div> <div class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">5/29/2019, 8:43:11 PM</span></div></div> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/myblog/Java/JavaBase/Java流程控制语句.html">
+          流程控制语句
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/myblog/assets/js/app.0c6a3e6f.js" defer></script><script src="/myblog/assets/js/20.8ac192ce.js" defer></script>
+  </body>
+</html>

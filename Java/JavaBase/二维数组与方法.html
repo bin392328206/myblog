@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>二维数组与方法 | jimmy(六脉神剑)</title>
+    <meta name="description" content="种一棵树最好的时候是十年前">
+    
+    
+    <link rel="preload" href="/myblog/assets/css/0.styles.bb285c56.css" as="style"><link rel="preload" href="/myblog/assets/js/app.0c6a3e6f.js" as="script"><link rel="preload" href="/myblog/assets/js/24.dcdc9d21.js" as="script"><link rel="prefetch" href="/myblog/assets/js/10.86e4b344.js"><link rel="prefetch" href="/myblog/assets/js/11.6bf75294.js"><link rel="prefetch" href="/myblog/assets/js/12.6a5fe9aa.js"><link rel="prefetch" href="/myblog/assets/js/13.c8027a8a.js"><link rel="prefetch" href="/myblog/assets/js/14.ba727d81.js"><link rel="prefetch" href="/myblog/assets/js/15.7aecfee7.js"><link rel="prefetch" href="/myblog/assets/js/16.f32dfcd4.js"><link rel="prefetch" href="/myblog/assets/js/17.f24bdcb9.js"><link rel="prefetch" href="/myblog/assets/js/18.8645cc73.js"><link rel="prefetch" href="/myblog/assets/js/19.e342a0be.js"><link rel="prefetch" href="/myblog/assets/js/2.03feb64a.js"><link rel="prefetch" href="/myblog/assets/js/20.8ac192ce.js"><link rel="prefetch" href="/myblog/assets/js/21.ac99894d.js"><link rel="prefetch" href="/myblog/assets/js/22.caad605c.js"><link rel="prefetch" href="/myblog/assets/js/23.fbd832c0.js"><link rel="prefetch" href="/myblog/assets/js/25.b06028eb.js"><link rel="prefetch" href="/myblog/assets/js/26.524af8a3.js"><link rel="prefetch" href="/myblog/assets/js/27.81a7f7a3.js"><link rel="prefetch" href="/myblog/assets/js/28.41a9ff2e.js"><link rel="prefetch" href="/myblog/assets/js/29.2f542642.js"><link rel="prefetch" href="/myblog/assets/js/3.4ada0c35.js"><link rel="prefetch" href="/myblog/assets/js/30.f94836cf.js"><link rel="prefetch" href="/myblog/assets/js/31.81d5337f.js"><link rel="prefetch" href="/myblog/assets/js/32.3fea46b6.js"><link rel="prefetch" href="/myblog/assets/js/33.eb59c615.js"><link rel="prefetch" href="/myblog/assets/js/34.c7a75edb.js"><link rel="prefetch" href="/myblog/assets/js/35.5eb6855b.js"><link rel="prefetch" href="/myblog/assets/js/36.2e5cb9bf.js"><link rel="prefetch" href="/myblog/assets/js/37.69fe98f5.js"><link rel="prefetch" href="/myblog/assets/js/38.9795f763.js"><link rel="prefetch" href="/myblog/assets/js/39.d5dce79b.js"><link rel="prefetch" href="/myblog/assets/js/4.1750788b.js"><link rel="prefetch" href="/myblog/assets/js/40.2103c17a.js"><link rel="prefetch" href="/myblog/assets/js/41.f5ea1578.js"><link rel="prefetch" href="/myblog/assets/js/42.72e5e6ab.js"><link rel="prefetch" href="/myblog/assets/js/43.80f5b6c8.js"><link rel="prefetch" href="/myblog/assets/js/44.055648bd.js"><link rel="prefetch" href="/myblog/assets/js/45.a3a6bde8.js"><link rel="prefetch" href="/myblog/assets/js/46.6dc3a768.js"><link rel="prefetch" href="/myblog/assets/js/47.26b73fda.js"><link rel="prefetch" href="/myblog/assets/js/48.566985e8.js"><link rel="prefetch" href="/myblog/assets/js/49.4e35fbc0.js"><link rel="prefetch" href="/myblog/assets/js/5.8bab9c37.js"><link rel="prefetch" href="/myblog/assets/js/50.7586c5df.js"><link rel="prefetch" href="/myblog/assets/js/51.ba057a22.js"><link rel="prefetch" href="/myblog/assets/js/52.538dfc53.js"><link rel="prefetch" href="/myblog/assets/js/53.0b9901c3.js"><link rel="prefetch" href="/myblog/assets/js/54.4b08cec5.js"><link rel="prefetch" href="/myblog/assets/js/55.15dfc3a4.js"><link rel="prefetch" href="/myblog/assets/js/56.18d2a3c1.js"><link rel="prefetch" href="/myblog/assets/js/57.38814818.js"><link rel="prefetch" href="/myblog/assets/js/6.e81ea5f3.js"><link rel="prefetch" href="/myblog/assets/js/7.f4baaa53.js"><link rel="prefetch" href="/myblog/assets/js/8.609aaec0.js"><link rel="prefetch" href="/myblog/assets/js/9.bf8da6ba.js">
+    <link rel="stylesheet" href="/myblog/assets/css/0.styles.bb285c56.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/myblog/" class="home-link router-link-active"><!----> <span class="site-name">jimmy(六脉神剑)</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/myblog/Java/" class="nav-link router-link-active">Java</a></div><div class="nav-item"><a href="/myblog/H5/" class="nav-link">前端</a></div><div class="nav-item"><a href="/myblog/go/" class="nav-link">Go</a></div><div class="nav-item"><a href="/myblog/BigData/" class="nav-link">大数据</a></div><div class="nav-item"><a href="/myblog/Thought/" class="nav-link">随笔</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">其他学习文档</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="http://www.wangbin.shop:8080" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  王斌学习博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://wangchujiang.com/linux-command/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Linux命令学习
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://blog.didispace.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  DD博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.hollischuang.com/archives/3280" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Java成神之路
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">在线工具</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://smallpdf.com/cn/pdf-to-word" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  PDF转换器
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.json.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  JSON编辑器
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://tableconvert.com/?output=text&amp;data=id%2C%20name%2C%20age%2C%20gender%0A1%2C%20Lawrence%2C%2039%2C%20M%0A2%2C%20Oliver%2C%2025%2C%20M%0A3%2C%20Roberta%2C%2017%2C%20F%0A4%2C%20Bamboo%2C%2070%2C%20F%0A" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  MD表格生成
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://cron.qqe2.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  CRON表达式
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://tool.oschina.net/codeformat/html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  代码格式化
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.toyaml.com/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  YAML-&gt;properties
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <a href="https://github.com/bin392328206/myblog.git" target="_blank" rel="noopener noreferrer" class="repo-link">
+    My GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/myblog/Java/" class="nav-link router-link-active">Java</a></div><div class="nav-item"><a href="/myblog/H5/" class="nav-link">前端</a></div><div class="nav-item"><a href="/myblog/go/" class="nav-link">Go</a></div><div class="nav-item"><a href="/myblog/BigData/" class="nav-link">大数据</a></div><div class="nav-item"><a href="/myblog/Thought/" class="nav-link">随笔</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">其他学习文档</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="http://www.wangbin.shop:8080" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  王斌学习博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://wangchujiang.com/linux-command/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Linux命令学习
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://blog.didispace.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  DD博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.hollischuang.com/archives/3280" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Java成神之路
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">在线工具</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://smallpdf.com/cn/pdf-to-word" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  PDF转换器
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.json.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  JSON编辑器
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://tableconvert.com/?output=text&amp;data=id%2C%20name%2C%20age%2C%20gender%0A1%2C%20Lawrence%2C%2039%2C%20M%0A2%2C%20Oliver%2C%2025%2C%20M%0A3%2C%20Roberta%2C%2017%2C%20F%0A4%2C%20Bamboo%2C%2070%2C%20F%0A" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  MD表格生成
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://cron.qqe2.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  CRON表达式
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://tool.oschina.net/codeformat/html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  代码格式化
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.toyaml.com/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  YAML-&gt;properties
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <a href="https://github.com/bin392328206/myblog.git" target="_blank" rel="noopener noreferrer" class="repo-link">
+    My GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first collapsable"><p class="sidebar-heading open"><span>Java基础</span> <span class="arrow down"></span></p> <ul class="sidebar-group-items"><li><a href="/myblog/Java/JavaBase/JavaFist.html" class="sidebar-link">了解Java</a></li><li><a href="/myblog/Java/JavaBase/Java流程控制语句.html" class="sidebar-link">流程控制语句</a></li><li><a href="/myblog/Java/JavaBase/数组.html" class="sidebar-link">数组</a></li><li><a href="/myblog/Java/JavaBase/二维数组与方法.html" class="active sidebar-link">二维数组与方法</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/myblog/Java/JavaBase/IO流1.html" class="sidebar-link">IO流1</a></li><li><a href="/myblog/Java/JavaBase/IO流2.html" class="sidebar-link">IO流2</a></li><li><a href="/myblog/Java/JavaBase/IO流3.html" class="sidebar-link">IO流3</a></li><li><a href="/myblog/Java/JavaBase/JsonAndXML.html" class="sidebar-link">JsonAndXML</a></li><li><a href="/myblog/Java/JavaBase/异常.html" class="sidebar-link">异常</a></li><li><a href="/myblog/Java/JavaBase/网络基础.html" class="sidebar-link">网络基础</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>JavaWep</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>Java框架</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>分布式</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>数据库</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>中间件</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>Linux 和 容器</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>服务网格</span> <span class="arrow right"></span></p> <!----></div></li></ul> </div> <div class="page"> <div class="content"><h3 id="二维数组与方法"><a href="#二维数组与方法" aria-hidden="true" class="header-anchor">#</a> 二维数组与方法</h3> <h4 id="二维数组"><a href="#二维数组" aria-hidden="true" class="header-anchor">#</a> 二维数组</h4> <blockquote><p><strong>什么是二维?</strong></p> <p>​	比如（合金弹头、超级玛丽）</p> <p>​	二维数组里面放一维数组。</p> <p><strong>什么是二维数组?</strong></p> <p>​	二维数组本质上是以数组作为数组元素的数组，即“数组的数组”，</p> <p>​	二维数组又称为<strong>矩阵</strong>，行列数相等的矩阵称为方阵</p> <p><strong>怎么创建一个二维数组?</strong></p> <div class="language- extra-class"><pre class="language-text"><code>数据类型[][]  对象名 = new 数据类型[x][y];
+x代表行
+y代表列
+</code></pre></div><p>例如:</p> <div class="language- extra-class"><pre class="language-text"><code>int[][] a = new int[2][2];
+</code></pre></div><p>数组：使用索引来操作元素，下面给二维数组赋值</p> <div class="language- extra-class"><pre class="language-text"><code>a[0][0] = 1;//第一行第一列
+a[0][1] = 2;//第一行第二列
+a[1][0] = 3;//第二行第一列
+a[1][1] = 4;//第二行第二列
+</code></pre></div><p>如何遍历一个二维数组：</p> <div class="language- extra-class"><pre class="language-text"><code>for(int i = 0;i&lt;a.length;a++){   // 外层循环代表行  a.length 求行数
+    for(int j = 0;j&lt;a[i].length;j++){//内层循环代表列 a[i].length 求每一行的列数
+    	System.out.print(a[i][j]);//打印第i行第j列的值
+    }
+    System.out.println();
+}
+</code></pre></div><p>练习：二维数组求和</p> <p>二维数组直接赋值:</p> <div class="language- extra-class"><pre class="language-text"><code>//第一种情况
+int[][] b = {
+    		{1,2},
+    		{3,4}
+			};
+// 这个数组与上述例子一样
+System
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>第二种情况:
+int[][] c = new int[][]{
+    				{1,2},
+    				{3,4}
+					};
+</code></pre></div></blockquote> <blockquote><p>学到这里二维数组完了吗？没呢，还有一种情况。</p> <div class="language- extra-class"><pre class="language-text"><code>// 先声明行，后声明列：
+String[][] y = new String[2][];
+y[0] = new int[2]; // 定义第一行有五列
+y[1] = new int[3];//定义第二行有十列
+</code></pre></div></blockquote> <blockquote><div class="language- extra-class"><pre class="language-text"><code>// 例如:多个市属于一个省
+// 广东省
+y[0][0] = &quot;广州市&quot;; 
+y[0][1] = &quot;深圳市&quot;;
+//陕西省
+y[1][0] = &quot;宝鸡市&quot;;
+y[1][1] = &quot;西安市&quot;;
+</code></pre></div><p>拔高练习: 打印杨辉三角</p> <p><img src="https://note.youdao.com/yws/public/resource/ccf99ef2d2d047876fb26608433468fc/xmlnote/9AE9D6874CB74A80956B9074ECB7841C/28475" alt="1528877358834"></p> <div class="language- extra-class"><pre class="language-text"><code>int[][] a = new int[10][];
+for(int i = 0;i&lt;a.length;i++){
+	a[i] = new int[i+1];
+	for(int j = 0;j&lt;a[i].length;j++){
+		if(j == 0 || i == j){
+			a[i][j] = 1;
+		}else{
+			a[i][j] = a[i -1][j] + a[i-1][j-1];
+		}
+	}
+			
+}
+for (int[] is : a) {
+	for (int i : is) {
+		System.out.print(i+&quot;\t&quot;);
+	}
+	System.out.println();
+}
+</code></pre></div></blockquote> <h4 id="方法"><a href="#方法" aria-hidden="true" class="header-anchor">#</a> 方法</h4> <blockquote><p><strong>什么是方法？</strong></p> <p>​	我们经常说做事要有方式方法。实现某个目的的具体过程.</p> <p>​	例如我们学过 main函数在里面写的排序，求水仙花数等</p> <p><strong>为什么要用方法？</strong></p> <p>​	例如：有三个人 小明，小华，小红三个人，</p> <p>​		老师要求小明把班级语文分数成绩排名</p> <p>​			要求小华把班级数学分数成绩排名</p> <p>​			要求小华把班级英语分数成绩排名</p> <p>​	这个时候都要用到排序，我们此时可以把制作一个排序的方法供他们使用</p> <p>​	这样代码就只用写一次，多次使用，这样就提高了代码的复用性</p> <p><strong>方法分为两类四种:</strong></p> <div class="language- extra-class"><pre class="language-text"><code>访问修饰符  是否静态 有无返回值  方法名( 有无参数 ){
+    
+} 
+//相似与
+public static void main(String[] args){
+    
+}
+</code></pre></div><p><strong>一. 无返回值</strong></p> <div class="language- extra-class"><pre class="language-text"><code>// 1.无参数无返回值
+public static void demo1(){
+    System.out.println(&quot;我是无参数无返回值&quot;);
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>// 1.有参数无返回值
+// 何为参数？ f(x)这个函数里面的 x 就叫做参数
+public static void demo2(int i){// int i 就是参数 
+    System.out.println(i);
+}
+练习: 传递一个一维数组，求出最大值。
+</code></pre></div><p>1.定义方法的步骤是什么?</p> <p>​	定义方法有两个明确:</p> <p>​		a.是否有返回值</p> <p>​		b.是否有未知参，参与运算</p> <p>2.方法的执行流程是什么?</p> <p>​	自己定义的方法不被调用的时候是不会被执行的。</p> <p>​	在主函数里直接写上方法的名字即可(要考虑是否需要参数)</p> <p>调用者: 主函数，main</p> <p>执行者: 某一个方法本身</p> <p>实际参数: 实际参与运算的数据</p> <p>形式参数: 方法小括号里的变量</p> <p><strong>二.有返回值</strong></p> <div class="language- extra-class"><pre class="language-text"><code>// 1. 无参数有返回值  
+// 什么是返回值？ 把void这个关键字改为 数据类型时就说明这个方法是有返回值的
+// 怎么返回？ 用 return 关键字， 返回的值的类型与方法上面的数据类型一致
+public static int demo3(){
+    return 5; // 返回值，顾名思义返回的是一个值
+}
+public static int demo4(){
+    int a = 5;
+    return a;
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>//2.有参数有返回值
+public static int demo5(int i){
+    
+    return i;
+}
+</code></pre></div><p><strong>注意:</strong></p> <p>​	其实每一个方法最后一行都有一个return，没有返回值可以省略不写，但系统会帮我们添加一个，其作用就是为了结束方法</p> <p>​	如果手动的写出 return 就不允许带回任意的数据。</p> <div class="language- extra-class"><pre class="language-text"><code>public static void test(){
+    return;
+}
+</code></pre></div><p>定义及使用方法的注意事项有哪些？</p> <p>​	1.方法不能定义在另外一个方法的里面</p> <p>​	2.写错方法名字</p> <p>​	3.写错了参数列表</p> <p>​	4.方法返回值是void，方法中可以省略return 不写</p> <p>​         <strong>（return 后面与下面不能有代码）</strong></p> <p>​	5.方法返回值类型和return 后面数据类型必须匹配</p> <p>​	6.调用方法的时候，返回值void不能写在输出语句中</p> <p>练习：</p> <p>addition、subtract、 multiply、division</p> <p>传递数组排序</p></blockquote> <h4 id="方法的重载"><a href="#方法的重载" aria-hidden="true" class="header-anchor">#</a> 方法的重载</h4> <blockquote><p><strong>什么是方法的重载?</strong></p> <p>​	在同一个类中：</p> <p>​		方法名相同</p> <p>​		参数列表不同(参数的顺序、个数、类型)</p> <p>​		和返回值无关</p> <div class="language- extra-class"><pre class="language-text"><code>public static void test1(){
+    
+}
+public static void test2(int i){
+    
+}
+public static void test3(String name){
+    
+}
+public static void test4(char sex){
+    
+}
+public static void test5(double weight){
+    
+}
+public static void test6(int i,int j){
+    
+}
+public static void test7(int i,String name){
+    
+}
+..........
+</code></pre></div><p><strong>方法参数分两种：</strong></p> <p>​	一.基本数据类型</p> <p>​		基本数据类型的变量当做参数传递的时候，是不改变原值</p> <p>​		方法的局部变量会随着方法的执行完毕而被释放</p> <p>​		局部变量:</p> <p>​			定义在方法的声明上和 方法体内</p> <p>​	二.引用数据类型</p> <p>​		引用数据类型当做参数传递，其实传递的是地址值，是改变原值</p> <p>​		即使方法执行完毕，但是实体(对象、数组)还在对内存中，所以在主函数里面继续访问的时候，已经是被更改后的值</p></blockquote></div> <div class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">5/29/2019, 8:43:11 PM</span></div></div> <!----> </div> <!----></div></div>
+    <script src="/myblog/assets/js/app.0c6a3e6f.js" defer></script><script src="/myblog/assets/js/24.dcdc9d21.js" defer></script>
+  </body>
+</html>
